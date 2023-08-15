@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+    <Name value="VideoPlayers" />
+    <Description value="Various video players like Billboards, TVs and a Theater Screen" />
+	<DisplayName value="VideoPlayers" />
+    <Author value="Xyth" />
+    <Version value="21.1.0.0" />
+</xml>
