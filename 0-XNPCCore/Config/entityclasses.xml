@@ -212,7 +212,7 @@
 			<property name="CompassUpIcon" value="ui_game_symbol_enemy_dot_up" />
 			<property name="CompassDownIcon" value="ui_game_symbol_enemy_dot_down" />
 			<property name="TrackerIcon" value="ui_game_symbol_run"/>
-		<!--	<property name="AIFeralSense" value="1.5"/> -->  <!-- works but makes bandits very aggressive  -->
+		<!--<property name="AIFeralSense" value="1.5"/> -->  <!-- works but may make bandits very aggressive  -->
 			<property name="AINoiseSeekDist" value="30"/>	
 			<property name="AIPathCostScale" value="1, 1"/>
 			<property name="LookAtAngle" value="60"/> 
@@ -4060,7 +4060,6 @@
 		</entity_class>
 		
 		<entity_class name="BackpackNPC">
-			<property name="UserSpawnType" value="Console"/>
 			<property name="Mesh" value="@:Entities/LootContainers/backpack_droppedPrefab.prefab"/>
 			<property name="ModelType" value="Custom"/>
 			<property name="Prefab" value="Backpack"/>
