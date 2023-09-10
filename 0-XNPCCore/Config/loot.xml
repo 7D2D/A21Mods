@@ -5,8 +5,8 @@
 	   </append> -->
 	
 	<!--
-        NPC lootgroups - mainly weapon groups that can spawn weapons, parts, or ammo.
-    -->
+		NPC lootgroups - mainly weapon groups that can spawn weapons, parts, or ammo.
+	-->
 	<insertBefore xpath="/lootcontainers/lootcontainer[1]">
 		<!-- NPC common backpack items loot groups - tiered medical, food, drink -->
 		<lootgroup name="groupNPCMedical" count="1">
@@ -30,12 +30,12 @@
 			<item group="groupNPCDrinks" loot_prob_template="medLow" />
 		</lootgroup>
 		<!--
-            NPC Core Mechs can be harvested for resources, so don't include these items:
-            * resourceMechanicalParts
-            * resourceScrapIron
-            * resourceElectricParts
-            * resourceScrapPolymers
-        -->
+			NPC Core Mechs can be harvested for resources, so don't include these items:
+			* resourceMechanicalParts
+			* resourceScrapIron
+			* resourceElectricParts
+			* resourceScrapPolymers
+		-->
 		<lootgroup name="groupNPCMechBackpacks" count="1,3">
 			<item name="gunBotRoboticsParts" count="1,2" loot_prob_template="high" />
 			<item name="resourceAcid" count="1" loot_prob_template="veryLow" />
@@ -243,10 +243,10 @@
 		</lootgroup>
 
 		<!--
-            These are the groups that are actually used by the loot containers.
-            They have a count of "all" to guarantee one item from the weapon/ammo group,
-            plus a chance of some backpack items.
-        -->
+			These are the groups that are actually used by the loot containers.
+			They have a count of "all" to guarantee one item from the weapon/ammo group,
+			plus a chance of some backpack items.
+		-->
 		<lootgroup name="groupCntNPCClub" count="all">
 			<item group="groupNPCClub" count="1" />
 			<item group="groupNPCBackpacks" loot_prob_template="medLow" force_prob="true" />
@@ -348,8 +348,8 @@
 	</insertBefore>
 
 	<!--
-        Custom NPC loot containers.
-    -->
+		Custom NPC loot containers.
+	-->
 	<append xpath="/lootcontainers">
 		<lootcontainer name="cntNPCEmptyHand" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" loot_quality_template="qualBaseTemplate">
 			<item group="groupNPCBackpacks" />
