@@ -159,7 +159,7 @@
 				<action name="MoveToEnemyShortRanged" weight="4">
 					<task class="MoveToAttackTargetSDX, SCore" run="false" action_index="1" />
 					<consideration class="SelfHasCVar, SCore" cvar="CurrentWeaponClass" value="1"/>
-					<consideration class="TargetDistance" min="14" max="40" curve="threshold" /> 
+					<consideration class="TargetDistance" min="10" max="40" curve="threshold" /> 
 					<consideration class="FailOnDistanceToLeader, SCore" max_distance="30" />
 					<consideration class="CanSeeTarget, SCore" />
 					<consideration class="NotHasOrder, SCore" order="Stay" />
@@ -167,7 +167,7 @@
 				<action name="MoveToEnemyMediumRanged" weight="4">
 					<task class="MoveToAttackTargetSDX, SCore" run="false" action_index="1" />
 					<consideration class="SelfHasCVar, SCore" cvar="CurrentWeaponClass" value="2"/>
-					<consideration class="TargetDistance" min="24" max="40" curve="threshold" />
+					<consideration class="TargetDistance" min="20" max="40" curve="threshold" />
 					<consideration class="FailOnDistanceToLeader, SCore" max_distance="30" />
 					<consideration class="CanSeeTarget, SCore" />
 					<consideration class="NotHasOrder, SCore" order="Stay" />
@@ -175,7 +175,7 @@
 				<action name="MoveToEnemyLongRanged" weight="4">
 					<task class="MoveToAttackTargetSDX, SCore" run="false" action_index="1" />
 					<consideration class="SelfHasCVar, SCore" cvar="CurrentWeaponClass" value="3"/>
-					<consideration class="TargetDistance" min="34" max="40" curve="threshold" />
+					<consideration class="TargetDistance" min="30" max="40" curve="threshold" />
 					<consideration class="FailOnDistanceToLeader, SCore" max_distance="30" />
 					<consideration class="CanSeeTarget, SCore" />
 					<consideration class="NotHasOrder, SCore" order="Stay" />
@@ -284,7 +284,7 @@
 					<task class="MoveToAttackTargetSDX, SCore" run="false" action_index="1" />
 					<consideration class="SelfHasCVar, SCore" cvar="CurrentWeaponClass" value="1"/>
 					<consideration class="SelfNotHasBuff, SCore" buffs="buffNPCModFullControlMode"/>
-					<consideration class="TargetDistance" min="14" max="40" curve="threshold" /> 
+					<consideration class="TargetDistance" min="10" max="40" curve="threshold" /> 
 					<consideration class="FailOnDistanceToLeader, SCore" max_distance="30" />
 					<consideration class="CanSeeTarget, SCore" />
 					<consideration class="NotHasOrder, SCore" order="Stay" />
@@ -293,7 +293,7 @@
 					<task class="MoveToAttackTargetSDX, SCore" run="false" action_index="1" />
 					<consideration class="SelfHasCVar, SCore" cvar="CurrentWeaponClass" value="2"/>
 					<consideration class="SelfNotHasBuff, SCore" buffs="buffNPCModFullControlMode"/>
-					<consideration class="TargetDistance"  min="24" max="40" curve="threshold" />
+					<consideration class="TargetDistance"  min="20" max="40" curve="threshold" />
 					<consideration class="FailOnDistanceToLeader, SCore" max_distance="30" />
 					<consideration class="CanSeeTarget, SCore" />
 					<consideration class="NotHasOrder, SCore" order="Stay" />
@@ -302,7 +302,7 @@
 					<task class="MoveToAttackTargetSDX, SCore" run="false" action_index="1" />
 					<consideration class="SelfHasCVar, SCore" cvar="CurrentWeaponClass" value="3"/>
 					<consideration class="SelfNotHasBuff, SCore" buffs="buffNPCModFullControlMode"/>
-					<consideration class="TargetDistance"  min="34" max="40" curve="threshold" />
+					<consideration class="TargetDistance"  min="30" max="40" curve="threshold" />
 					<consideration class="FailOnDistanceToLeader, SCore" max_distance="30" />
 					<consideration class="CanSeeTarget, SCore" />
 					<consideration class="NotHasOrder, SCore" order="Stay" /> 
@@ -369,7 +369,7 @@
 					<consideration class="SelfHasBuff, SCore" buffs="buffNPCModFullControlMode"/>
 					<consideration class="SelfNotHasBuff, SCore" buffs="buffNPCModStopAttacking"/>
 					<consideration class="TargetHasBuff, SCore" buffs="buffNPCModAttacking"/>
-					<consideration class="TargetDistance" min="14" max="40" curve="threshold" /> 
+					<consideration class="TargetDistance" min="10" max="40" curve="threshold" /> 
 					<consideration class="FailOnDistanceToLeader, SCore" max_distance="30" />
 					<consideration class="CanSeeTarget, SCore" />
 					<consideration class="NotHasOrder, SCore" order="Stay" />
@@ -380,7 +380,7 @@
 					<consideration class="SelfHasBuff, SCore" buffs="buffNPCModFullControlMode"/>
 					<consideration class="SelfNotHasBuff, SCore" buffs="buffNPCModStopAttacking"/>
 					<consideration class="TargetHasBuff, SCore" buffs="buffNPCModAttacking"/>
-					<consideration class="TargetDistance"  min="24" max="40" curve="threshold" />
+					<consideration class="TargetDistance"  min="20" max="40" curve="threshold" />
 					<consideration class="FailOnDistanceToLeader, SCore" max_distance="30" />
 					<consideration class="CanSeeTarget, SCore" />
 					<consideration class="NotHasOrder, SCore" order="Stay" />
@@ -391,7 +391,7 @@
 					<consideration class="SelfHasBuff, SCore" buffs="buffNPCModFullControlMode"/>
 					<consideration class="SelfNotHasBuff, SCore" buffs="buffNPCModStopAttacking"/>
 					<consideration class="TargetHasBuff, SCore" buffs="buffNPCModAttacking"/>
-					<consideration class="TargetDistance"  min="34" max="40" curve="threshold" />
+					<consideration class="TargetDistance"  min="30" max="40" curve="threshold" />
 					<consideration class="FailOnDistanceToLeader, SCore" max_distance="30" />
 					<consideration class="CanSeeTarget, SCore" />
 					<consideration class="NotHasOrder, SCore" order="Stay" />
@@ -505,7 +505,7 @@
 				<action name="MoveToEnemyMediumRanged" weight="4">
 					<task class="MoveToAttackTargetSDX, SCore" run="false" action_index="1" />
 					<consideration class="SelfHasCVar, SCore" cvar="CurrentWeaponClass" value="2"/>
-					<consideration class="TargetDistance"  min="24" max="40" curve="threshold" />
+					<consideration class="TargetDistance"  min="20" max="40" curve="threshold" />
 					<!-- <consideration class="FailOnDistanceToLeader, SCore" max_distance="30" /> -->
 					<consideration class="CanSeeTarget, SCore" />
 					<consideration class="NotHasOrder, SCore" order="Stay" />
@@ -513,7 +513,7 @@
 				<action name="MoveToEnemyLongRanged" weight="4">
 					<task class="MoveToAttackTargetSDX, SCore" run="false" action_index="1" />
 					<consideration class="SelfHasCVar, SCore" cvar="CurrentWeaponClass" value="3"/>
-					<consideration class="TargetDistance"  min="34" max="40" curve="threshold" />
+					<consideration class="TargetDistance"  min="30" max="40" curve="threshold" />
 					<!-- <consideration class="FailOnDistanceToLeader, SCore" max_distance="30" /> -->
 					<consideration class="CanSeeTarget, SCore" />
 					<consideration class="NotHasOrder, SCore" order="Stay" />
