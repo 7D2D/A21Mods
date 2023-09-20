@@ -480,7 +480,7 @@
 		</buff> 	
 			
 		<buff name="WeaponUser2">
-			<stack_type value="replace"/>
+			<stack_type value="ignore"/>
 			<duration value="2"/>
 			<!-- This sets the HoldType value used to path to animations  -->
 			<effect_group>

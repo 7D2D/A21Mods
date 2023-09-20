@@ -13,21 +13,20 @@
 	<append xpath="/items">
 	
 		<item name="spherePickUpNPC">
-		  <property name="HoldType" value="7"/>
-		  <property name="Meshfile" value="@:Entities/Vehicles/minibike_Prefab.prefab"/>
-		  <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
-		  <property name="Material" value="Mmetal"/>
-		  <property name="HoldingItemHidden" value="true"/>
-		  <property name="Weight" value="0"/>
-		  <property name="Stacknumber" value="1"/>
-		  <property name="EconomicValue" value="6000"/>
-		  <property name="CustomIcon" value="schematicMaster" />
-		  <!-- Probably not a good precedent to be sellable.-->
-		  <property name="SellableToTrader" value="false"/>
-		  <property class="Action1">
-			<property name="Class" value="DeployNPCSDX, SCore"/>
-		  </property>
-		</item>
+          <property name="HoldType" value="7"/>
+          <property name="Meshfile" value="#@modfolder:Resources/placementfemale.unity3d?placementfemale"/>
+          <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/> 
+          <property name="Material" value="Mmetal"/>
+          <property name="HoldingItemHidden" value="true"/>
+          <property name="Weight" value="0"/>
+          <property name="Stacknumber" value="1"/>
+          <property name="EconomicValue" value="6000"/>
+          <property name="CustomIcon" value="schematicMaster" />
+          <property name="SellableToTrader" value="false"/>
+          <property class="Action1">
+            <property name="Class" value="DeployNPCSDX, SCore"/>
+          </property>
+        </item>
 	
 		<item name="itemNPCModHelp">
 			<property name="HoldType" value="9"/>
@@ -306,6 +305,7 @@
 
 		<item name="meleeNPCKnife"> 
 			<property name="Extends" value="meleeHandNPCMaster"/>
+			<property name="CompatibleWeapon" value="meleeWpnBladeT1HuntingKnife" />
 			<property name="RightHandJointName" value="Knife" />
 			<property name="Canhold" value="true"/> 
 			<property name="HoldType" value="36"/>
@@ -406,6 +406,7 @@
 		
 		<item name="meleeNPCMachete">
 			<property name="Extends" value="meleeHandNPCMaster"/>
+			<property name="CompatibleWeapon" value="meleeWpnBladeT3Machete" />
 			<property name="RightHandJointName" value="Machete" />
 			<property name="Canhold" value="true"/> 
 			<property name="HoldType" value="32"/> <!-- 47 is default with.1 delay, but 32 has a .2 delay and looks better -->
@@ -502,6 +503,7 @@
 
 		<item name="meleeNPCClubWood"> 
 			<property name="Extends" value="meleeHandNPCMaster" />
+			<property name="CompatibleWeapon" value="meleeWpnClubT0WoodenClub" />
 			<property name="RightHandJointName" value="Club" />
 			<property name="Canhold" value="true"/> 
 			<property name="HoldType" value="36"/>
@@ -600,6 +602,7 @@
 		</item>
 		<item name="meleeNPCBatWood"> 
 			<property name="Extends" value="meleeHandNPCMaster"/>
+			<property name="CompatibleWeapon" value="meleeWpnClubT1BaseballBat" />
 			<property name="RightHandJointName" value="Bat" />
 			<property name="Canhold" value="true"/> 
 			<property name="HoldType" value="36"/>
@@ -699,6 +702,7 @@
 		
 		<item name="meleeNPCAxe"> 
 			<property name="Extends" value="meleeHandNPCMaster"/>
+			<property name="CompatibleWeapon" value="meleeToolAxeT1IronFireaxe" />
 			<property name="RightHandJointName" value="Axe" />
 			<property name="Canhold" value="true"/> 
 			<property name="HoldType" value="2"/>
@@ -797,6 +801,7 @@
 		
 		<item name="meleeNPCSpear"> 
 			<property name="Extends" value="meleeHandNPCMaster"/>
+			<property name="CompatibleWeapon" value="meleeWpnSpearT1IronSpear" />
 			<property name="RightHandJointName" value="Spear" />
 			<property name="Canhold" value="true"/> 
 			<property name="HoldType" value="2"/>
@@ -902,7 +907,7 @@
 			<property name="DisplayType" value="rangedGun"/>
 			<property name="RightHandJointName" value="SMG" />
 			<property name="HoldType" value="2"/> <!-- vanilla 6 --> <!-- So on ranged weapons, a small delay to the raycast is needed so the raycast doesnt fire when the melee animation is moving backwards.  Holdtype one adds a .16 delay.  Seems okay for the guns tested, but each weapon might better use more or less delay.  Setting Showhits in console shows the hit vector -->
-			
+			<property name="CompatibleWeapon" value="gunHandgunT3SMG5" />
 			<property name="Stacknumber" value="1"/>
 			<property name="Candrop" value="false"/>	<!--  required or it will drop an Uber gun that never needs reloading  -->	
 			<property name="Meshfile" value="@:Other/Items/Weapons/Ranged/SMG/smgPrefab.prefab"/>
@@ -1014,6 +1019,7 @@
 		
 		<item name="gunNPCPipePistol">
 			<property name="Extends" value="gunNPCSMG5"/> 
+			<property name="CompatibleWeapon" value="gunHandgunT0PipePistol" />
 			<property name="RightHandJointName" value="PipePistol" />
 			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty4,gun,shortRange,revolver,barrelAttachments,sideAttachments,smallTopAttachments,attAgility,perkGunslinger,9mmGun,attachmentsIncluded,canHaveCosmetic"/>
 			<property name="CreativeMode" value="None"/>
@@ -1123,6 +1129,7 @@
 		
 		<item name="gunNPCPipePistol2">
 			<property name="Extends" value="gunNPCSMG5"/> 
+			<property name="CompatibleWeapon" value="gunHandgunT0PipePistol" />
 			<property name="RightHandJointName" value="PipePistol" />
 			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty4,gun,shortRange,revolver,barrelAttachments,sideAttachments,smallTopAttachments,attAgility,perkGunslinger,9mmGun,attachmentsIncluded,canHaveCosmetic"/>
 			<property name="CreativeMode" value="None"/>
@@ -1240,7 +1247,8 @@
 		</item>				
 			
 		<item name="gunNPCPipeShotgun">
-			<property name="Extends" value="gunNPCSMG5"/> 
+			<property name="Extends" value="gunNPCSMG5"/>
+			<property name="CompatibleWeapon" value="gunShotgunT0PipeShotgun" />
 			<property name="RightHandJointName" value="PipeSG" />
 			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty5,gun,shotgun,shortRange,barrelAttachments,sideAttachments,stock,smallTopAttachments,noScopes,bottomAttachments,attStrength,perkBoomstick,attachmentsIncluded,canHaveCosmetic"/>
 			<property name="CreativeMode" value="None"/>
@@ -1359,6 +1367,7 @@
 		
 		<item name="gunNPCPipeRifle">
 			<property name="Extends" value="gunNPCSMG5"/> 
+			<property name="CompatibleWeapon" value="gunRifleT0PipeRifle" />
 			<property name="RightHandJointName" value="PipeRifle" />
 			<property name="Tags" value="weapon,ranged,medRange,holdBreathAiming,reloadPenalty3,gun,barrelAttachments,sideAttachments,smallTopAttachments,mediumTopAttachments,largeTopAttachments,stock,attachmentsIncluded,bottomAttachments,attPerception,perkDeadEye,canHaveCosmetic"/>
 			<property name="CreativeMode" value="None"/>
@@ -1466,6 +1475,7 @@
 		
 		<item name="gunNPCPipeMG">
 			<property name="Extends" value="gunNPCSMG5"/>
+			<property name="CompatibleWeapon" value="gunMGT0PipeMachineGun" />
 			<property name="RightHandJointName" value="PipeMG" />
 			<property name="Tags" value="weapon,ranged,medRange,holdBreathAiming,reloadPenalty2,gun,barrelAttachments,sideAttachments,smallTopAttachments,mediumTopAttachments,stock,magazine,drumMagazine,firingMode,bottomAttachments,attFortitude,perkMachineGunner,perkBookAutoWeapons,attachmentsIncluded,canHaveCosmetic"/>
 			<property name="CreativeMode" value="None"/>
@@ -1569,6 +1579,7 @@
 		
 		<item name="gunNPCM60">
 			<property name="Extends" value="gunNPCSMG5"/> 
+			<property name="CompatibleWeapon" value="gunMGT3M60" />
 			<property name="RightHandJointName" value="M60" />
 			<property name="Tags" value="weapon,ranged,medRange,holdBreathAiming,reloadPenalty4,gun,barrelAttachments,sideAttachments,smallTopAttachments,magazine,drumMagazine,bottomAttachments,mediumTopAttachments,attFortitude,perkMachineGunner,perkBookAutoWeapons,attachmentsIncluded,canHaveCosmetic"/>
 			<property name="CreativeMode" value="None"/>
@@ -1685,6 +1696,7 @@
 
 		<item name="gunNPCPistol">
 			<property name="Extends" value="gunNPCSMG5"/>
+			<property name="CompatibleWeapon" value="gunHandgunT1Pistol" />
 			<property name="RightHandJointName" value="Pistol" />
 			<property name="Tags" value="weapon,ranged,shortRange,gun,pistol,reloadPenalty1,barrelAttachments,sideAttachments,smallTopAttachments,magazine,firingMode,attAgility,perkGunslinger"/>
 			<property name="CreativeMode" value="None"/>
@@ -1803,6 +1815,7 @@
 
 		<item name="gunNPCPistolHidden"> <!-- Using as default for ranged mechs  -->
 			<property name="Extends" value="gunNPCPistol"/> 
+			<property name="CompatibleWeapon" value="gunHandgunT1Pistol" />
 			<property name="RightHandJointName" value="Pistol" />
 			<property name="Tags" value="weapon,ranged,shortRange,gun,pistol,reloadPenalty1,barrelAttachments,sideAttachments,smallTopAttachments,magazine,firingMode,attAgility,perkGunslinger"/>
 			<property name="CreativeMode" value="None"/>
@@ -1945,7 +1958,8 @@
 		</item>
 
 		<item name="gunNPCDPistol">
-			<property name="Extends" value="gunNPCSMG5"/> 
+			<property name="Extends" value="gunNPCSMG5"/>
+			<property name="CompatibleWeapon" value="gunHandgunT3DesertVulture" />
 			<property name="RightHandJointName" value="DPistol" />
 			<property name="Tags" value="weapon,ranged,revolver,gun,shortRange,reloadPenalty1,pistol,barrelAttachments,sideAttachments,smallTopAttachments,magazine,firingMode,attAgility,perkGunslinger,attachmentsIncluded,canHaveCosmetic"/>
 			<property name="CreativeMode" value="None"/>
@@ -2059,6 +2073,7 @@
 		
 		<item name="gunNPCAk47">
 			<property name="Extends" value="gunNPCSMG5"/> 
+			<property name="CompatibleWeapon" value="gunMGT1AK47" />
 			<property name="RightHandJointName" value="AK47" />
 			<property name="Tags" value="weapon,ranged,medRange,gun,barrelAttachments,reloadPenalty2,sideAttachments,smallTopAttachments,mediumTopAttachments,stock,magazine,drumMagazine,firingMode,bottomAttachments,attFortitude,perkMachineGunner,perkBookAutoWeapons,attachmentsIncluded,canHaveCosmetic"/>
 			<property name="CreativeMode" value="None"/>
@@ -2162,6 +2177,7 @@
 		
 		<item name="gunNPCTRifle">
 			<property name="Extends" value="gunNPCSMG5"/> 
+			<property name="CompatibleWeapon" value="gunMGT2TacticalAR" />
 			<property name="RightHandJointName" value="TRifle" />
 			<property name="Tags" value="weapon,ranged,medRange,gun,barrelAttachments,reloadPenalty1,sideAttachments,smallTopAttachments,mediumTopAttachments,stock,magazine,drumMagazine,firingMode,bottomAttachments,attFortitude,perkMachineGunner,perkBookAutoWeapons,canHaveCosmetic"/>
 			<property name="CreativeMode" value="None"/>
@@ -2262,6 +2278,7 @@
 		
 		<item name="gunNPCHRifle">
 			<property name="Extends" value="gunNPCSMG5"/> 
+			<property name="CompatibleWeapon" value="gunRifleT1HuntingRifle" />
 			<property name="RightHandJointName" value="HRifle" />
 			<property name="Tags" value="weapon,ranged,longRange,gun,barrelAttachments,reloadPenalty1,sideAttachments,smallTopAttachments,mediumTopAttachments,largeTopAttachments,stock,bottomAttachments,attPerception,perkDeadEye,attachmentsIncluded,canHaveCosmetic"/>
 			<property name="CreativeMode" value="None"/>
@@ -2374,6 +2391,7 @@
 		
 		<item name="gunNPCSRifle">
 			<property name="Extends" value="gunNPCSMG5"/> 
+			<property name="CompatibleWeapon" value="gunRifleT3SniperRifle" />
 			<property name="RightHandJointName" value="SRifle" />
 			<property name="Tags" value="weapon,ranged,longRange,gun,barrelAttachments,reloadPenalty2,sideAttachments,smallTopAttachments,mediumTopAttachments,largeTopAttachments,stock,magazine,firingMode,bottomAttachments,attPerception,perkDeadEye,attachmentsIncluded,canHaveCosmetic"/>
 			<property name="CreativeMode" value="None"/>
@@ -2487,6 +2505,7 @@
 		
 		<item name="gunNPCLBow"> 
 			<property name="Extends" value="gunNPCSMG5"/>
+			<property name="CompatibleWeapon" value="gunBowT3CompoundBow" />
 			<property name="RightHandJointName" value="LBow" />
 			<property name="Tags" value="weapon,ranged,medRange,gun,attAgility,perkArchery,canHaveCosmetic"/>
 			<property name="CreativeMode" value="None"/>
@@ -2603,6 +2622,7 @@
 
 		<item name="gunNPCXBow">
 			<property name="Extends" value="gunNPCSMG5"/>
+			<property name="CompatibleWeapon" value="gunBowT1IronCrossbow" />
 			<property name="RightHandJointName" value="XBow" />
 			<property name="Tags" value="weapon,ranged,medRange,sideAttachments,reloadPenalty1,smallTopAttachments,mediumTopAttachments,bottomAttachments,attAgility,perkArchery,crossbow,attachmentsIncluded,canHaveCosmetic"/>
 			<property name="CreativeMode" value="None"/>
@@ -2732,6 +2752,7 @@
 		
 		<item name="gunNPCPShotgun">
 			<property name="Extends" value="gunNPCSMG5"/> 
+			<property name="CompatibleWeapon" value="gunShotgunT2PumpShotgun" />
 			<property name="RightHandJointName" value="PShotgun" />
 			<property name="Tags" value="weapon,ranged,gun,shotgun,shortRange,reloadPenalty2,barrelAttachments,sideAttachments,smallTopAttachments,noScopes,stock,bottomAttachments,perkBoomstick,modGunShotgunTubeExtenderMagazine,attachmentsIncluded,canHaveCosmetic"/>
 			<property name="CreativeMode" value="None"/>
@@ -2786,11 +2807,9 @@
 				<property name="DamageBlock" value="10"/> 				
 			</property>
 			<effect_group name="gunShotgunT2PumpShotgun">
-
 				<passive_effect name="EntityDamage" operation="perc_add" value="0,.4"/> <!-- Simulate random number of mods added -->
 				<passive_effect name="RoundsPerMinute" operation="base_set" value="60" tags="perkBoomstick"/>
 				<passive_effect name="BurstRoundCount" operation="base_set" value="1" tags="perkBoomstick"/>
-
 				<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1" tags="perkBoomstick"/> <!-- 2.3s -->
 				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
 				<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
@@ -2851,6 +2870,7 @@
 	
 		<item name="gunNPCAShotgun">
 			<property name="Extends" value="gunNPCSMG5"/> 
+			<property name="CompatibleWeapon" value="gunShotgunT3AutoShotgun" />
 			<property name="RightHandJointName" value="AShotgun" />
 			<property name="Tags" value="weapon,ranged,gun,shotgun,shortRange,reloadPenalty2,barrelAttachments,sideAttachments,smallTopAttachments,noScopes,stock,magazine,drumMagazine,bottomAttachments,attStrength,perkBoomstick,attachmentsIncluded,canHaveCosmetic"/>
 			<property name="CreativeMode" value="None"/>
@@ -2967,6 +2987,7 @@
 		</item>		
 
 		<item name="gunNPCRocketLauncher">
+			<property name="CompatibleWeapon" value="gunExplosivesT3RocketLauncher" />
 			<property name="Tags" value="weapon,ranged,longRange,launcher,gun,perkDemolitionsExpert"/>
 			<property name="RightHandJointName" value="RocketL" />
 			<property name="DisplayType" value="rangedLauncher"/>
