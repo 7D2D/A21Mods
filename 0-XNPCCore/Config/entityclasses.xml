@@ -559,7 +559,7 @@
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityPlayer,EntityZombie,EntityEnemyAnimal"/>
 			<!-- <property name="AITarget-1" value="SetAsTargetIfHurtSDX, SCore" data="class=EntityAlive"/>	-->	
 			<property name="AITarget-2" value="BlockingTargetTask"	/>
-			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,0,0,EntityZombie,0,0,EntityEnemyAnimal,0,0,EntityAnimal,0,0" />				
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityAlive,0,0" />			
 			<property name="AITarget-4" value=""/> 
 		</entity_class>		
 		
@@ -582,7 +582,7 @@
 			
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityPlayer,EntityZombie,EntityEnemyAnimal"/>	
 			<property name="AITarget-2" value="BlockingTargetTask"	/>
-			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,0,0,EntityZombie,0,0,EntityEnemyAnimal,0,0,EntityAnimal,0,0" />				
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityAlive,0,0" />			
 			<property name="AITarget-4" value=""/> 
 		</entity_class>		
 
