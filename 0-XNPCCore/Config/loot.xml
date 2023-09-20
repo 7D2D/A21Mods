@@ -3,5 +3,434 @@
 	   <!--<append xpath="/lootcontainers/lootgroup[@name='groupMedicalRare']">
 			<item name="drugHealInfectedCharacter" />
 	   </append> -->
+	
+	<!--
+		NPC lootgroups - mainly weapon groups that can spawn weapons, parts, or ammo.
+	-->
+	<insertBefore xpath="/lootcontainers/lootcontainer[1]">
+		<!-- NPC common backpack items loot groups - tiered medical, food, drink -->
+		<lootgroup name="groupNPCMedical" count="1">
+			<item group="groupMedicalSmall01" loot_prob_template="ProbT0" />
+			<item group="groupMedicalMed01" loot_prob_template="ProbT1" />
+			<item group="groupMedicalLarge01" loot_prob_template="ProbT1Cap" />
+		</lootgroup>
+		<lootgroup name="groupNPCFood" count="1">
+			<item group="groupFoodSmall01" loot_prob_template="ProbT0" />
+			<item group="groupFoodMed01" loot_prob_template="ProbT1" />
+			<item group="groupFoodLarge01" loot_prob_template="ProbT1Cap" />
+		</lootgroup>
+		<lootgroup name="groupNPCDrinks" count="1">
+			<item group="groupDrinksSmall01" loot_prob_template="ProbT0" />
+			<item group="groupDrinksMed01" loot_prob_template="ProbT1" />
+			<item group="groupDrinksLarge01" loot_prob_template="ProbT1Cap" />
+		</lootgroup>
+		<lootgroup name="groupNPCBackpacks">
+			<item group="groupNPCMedical" loot_prob_template="low" />
+			<item group="groupNPCFood" loot_prob_template="medLow" />
+			<item group="groupNPCDrinks" loot_prob_template="medLow" />
+		</lootgroup>
+		<!--
+			NPC Core Mechs can be harvested for resources, so don't include these items:
+			* resourceMechanicalParts
+			* resourceScrapIron
+			* resourceElectricParts
+			* resourceScrapPolymers
+		-->
+		<lootgroup name="groupNPCMechBackpacks" count="1,3">
+			<item name="gunBotRoboticsParts" count="1,2" loot_prob_template="high" />
+			<item name="resourceAcid" count="1" loot_prob_template="veryLow" />
+			<item name="resourceForgedIron" count="1,5" loot_prob_template="low" />
+			<item name="resourceForgedSteel" count="1,3" loot_prob_template="veryLow" />
+			<item name="resourceHeadlight" count="1,2" loot_prob_template="med" />
+			<item name="resourceMetalPipe" count="1,5" loot_prob_template="med" />
+			<item name="resourceOil" count="1,5" loot_prob_template="med" />
+			<item name="resourceSpring" count="1,2" loot_prob_template="med" />
+			<item group="groupRareAutomotive" count="1" loot_prob_template="low" />
+		</lootgroup>
+
+		<!-- NPC ammo loot groups, scaled. -->
+		<lootgroup name="groupNPCAmmo9mmBullet">
+			<item name="ammo9mmBulletBall" loot_prob_template="ProbT0" count="15,30" />
+			<item name="ammo9mmBulletBall" loot_prob_template="ProbT1" count="20,40" />
+			<item name="ammo9mmBulletBall" loot_prob_template="ProbT2" count="30,60" />
+			<item name="ammo9mmBulletBall" loot_prob_template="ProbT3" count="45,90" />
+			<item name="ammo9mmBulletAP" loot_prob_template="ProbT2" count="15,30" />
+			<item name="ammo9mmBulletAP" loot_prob_template="ProbT3" count="20,40" />
+			<item name="ammo9mmBulletHP" loot_prob_template="ProbT2" count="15,30" />
+			<item name="ammo9mmBulletHP" loot_prob_template="ProbT3" count="20,40" />
+		</lootgroup>
+		<lootgroup name="groupNPCAmmo762mmBullet">
+			<item name="ammo762mmBulletBall" loot_prob_template="ProbT0" count="6,12" />
+			<item name="ammo762mmBulletBall" loot_prob_template="ProbT1" count="8,17" />
+			<item name="ammo762mmBulletBall" loot_prob_template="ProbT2" count="12,25" />
+			<item name="ammo762mmBulletBall" loot_prob_template="ProbT3" count="18,37" />
+			<item name="ammo762mmBulletAP" loot_prob_template="ProbT2" count="8,19" />
+			<item name="ammo762mmBulletAP" loot_prob_template="ProbT3" count="12,25" />
+			<item name="ammo762mmBulletHP" loot_prob_template="ProbT2" count="8,19" />
+			<item name="ammo762mmBulletHP" loot_prob_template="ProbT3" count="12,25" />
+		</lootgroup>
+		<lootgroup name="groupNPCAmmo44MagnumBullet">
+			<item name="ammo44MagnumBulletBall" loot_prob_template="ProbT0" count="6,14" />
+			<item name="ammo44MagnumBulletBall" loot_prob_template="ProbT1" count="8,19" />
+			<item name="ammo44MagnumBulletBall" loot_prob_template="ProbT2" count="12,29" />
+			<item name="ammo44MagnumBulletBall" loot_prob_template="ProbT3" count="18,44" />
+			<item name="ammo44MagnumBulletAP" loot_prob_template="ProbT2" count="6,14" />
+			<item name="ammo44MagnumBulletAP" loot_prob_template="ProbT3" count="8,19" />
+			<item name="ammo44MagnumBulletHP" loot_prob_template="ProbT2" count="6,14" />
+			<item name="ammo44MagnumBulletHP" loot_prob_template="ProbT3" count="8,19" />
+		</lootgroup>
+		<lootgroup name="groupNPCAmmoShotgun">
+			<item name="ammoShotgunShell" loot_prob_template="ProbT0" count="3,4" />
+			<item name="ammoShotgunShell" loot_prob_template="ProbT1" count="5,7" />
+			<item name="ammoShotgunShell" loot_prob_template="ProbT2" count="8,12" />
+			<item name="ammoShotgunShell" loot_prob_template="ProbT3" count="12,19" />
+			<item name="ammoShotgunSlug" loot_prob_template="ProbT2" count="6,11" />
+			<item name="ammoShotgunSlug" loot_prob_template="ProbT3" count="8,16" />
+			<item name="ammoShotgunBreachingSlug" loot_prob_template="ProbT2" count="6,11" />
+			<item name="ammoShotgunBreachingSlug" loot_prob_template="ProbT3" count="8,16" />
+		</lootgroup>
+		<lootgroup name="groupNPCAmmoArrow">
+			<item name="ammoArrowStone" loot_prob_template="ProbT0" count="4,6" />
+			<item name="ammoArrowStone" loot_prob_template="ProbT1" count="8,12" />
+			<item name="ammoArrowStone" loot_prob_template="ProbT2" count="16,24" />
+			<item name="ammoArrowIron" loot_prob_template="ProbT1" count="4,6" />
+			<item name="ammoArrowIron" loot_prob_template="ProbT2" count="8,12" />
+			<item name="ammoArrowIron" loot_prob_template="ProbT3" count="16,24" />
+			<item name="ammoArrowSteelAP" loot_prob_template="ProbT2" count="4,6" />
+			<item name="ammoArrowSteelAP" loot_prob_template="ProbT3" count="8,12" />
+		</lootgroup>
+		<lootgroup name="groupNPCAmmoCrossbowBolt">
+			<item name="ammoCrossbowBoltStone" loot_prob_template="ProbT0" count="4,6" />
+			<item name="ammoCrossbowBoltStone" loot_prob_template="ProbT1" count="8,12" />
+			<item name="ammoCrossbowBoltStone" loot_prob_template="ProbT2" count="16,24" />
+			<item name="ammoCrossbowBoltIron" loot_prob_template="ProbT1" count="4,6" />
+			<item name="ammoCrossbowBoltIron" loot_prob_template="ProbT2" count="8,12" />
+			<item name="ammoCrossbowBoltIron" loot_prob_template="ProbT3" count="16,24" />
+			<item name="ammoCrossbowBoltSteelAP" loot_prob_template="ProbT2" count="4,6" />
+			<item name="ammoCrossbowBoltSteelAP" loot_prob_template="ProbT3" count="8,12" />
+		</lootgroup>
+
+		<!-- NPC weapon loot groups, scaled. The groups with a single item exist to scale the item quality. -->
+		<lootgroup name="groupNPCClub" loot_quality_template="QLTemplateT0">
+			<item name="meleeWpnClubT0WoodenClub" />
+		</lootgroup>
+		<lootgroup name="groupNPCKnife" loot_quality_template="QLTemplateT1">
+			<item name="meleeWpnBladeT1HuntingKnife" />
+		</lootgroup>
+		<lootgroup name="groupNPCBat" loot_quality_template="QLTemplateT1">
+			<item name="meleeWpnClubT1BaseballBat" />
+		</lootgroup>
+		<lootgroup name="groupNPCAxe" loot_quality_template="QLTemplateT1">
+			<item name="meleeToolAxeT1IronFireaxe" count="1" />
+		</lootgroup>
+		<lootgroup name="groupNPCStoneSpear" loot_quality_template="QLTemplateT0">
+			<item name="meleeWpnSpearT0StoneSpear" count="1" />
+		</lootgroup>
+		<lootgroup name="groupNPCIronSpear" loot_quality_template="QLTemplateT1">
+			<item name="meleeWpnSpearT1IronSpear" count="1" />
+		</lootgroup>
+		<lootgroup name="groupNPCSteelSpear" loot_quality_template="QLTemplateT3">
+			<item name="meleeWpnSpearT3SteelSpear" count="1" />
+		</lootgroup>
+		<lootgroup name="groupNPCSpear">
+			<item group="groupNPCStoneSpear" loot_prob_template="ProbT0" />
+			<item group="groupNPCIronSpear" loot_prob_template="ProbT1Cap" />
+			<item group="groupNPCSteelSpear" loot_prob_template="ProbT2Cap" />
+			<item name="meleeWpnSpearT3SteelSpearParts" count="1,4" loot_prob_template="ProbT2" />
+		</lootgroup>
+		<lootgroup name="groupNPCMachete" loot_quality_template="QLTemplateT2">
+			<item name="meleeWpnBladeT3Machete" loot_prob_template="medHigh" />
+			<item name="meleeWpnBladeT3MacheteParts" count="1,4" loot_prob_template="medLow" />
+		</lootgroup>
+		<lootgroup name="groupNPCPipePistol" loot_quality_template="QLTemplateT0">
+			<item name="gunHandgunT0PipePistol" loot_prob_template="medHigh" />
+			<item group="groupNPCAmmo9mmBullet" loot_prob_template="med" />
+		</lootgroup>
+		<lootgroup name="groupNPCPistol" loot_quality_template="QLTemplateT1">
+			<item name="gunHandgunT1Pistol" loot_prob_template="medHigh" />
+			<item group="groupNPCAmmo9mmBullet" loot_prob_template="med" />
+			<item name="gunHandgunT1PistolParts" count="1,4" loot_prob_template="medLow" />
+		</lootgroup>
+		<lootgroup name="groupNPCDPistol" loot_quality_template="QLTemplateT2">
+			<item name="gunHandgunT3DesertVulture" loot_prob_template="medHigh" />
+			<item group="groupNPCAmmo44MagnumBullet" loot_prob_template="med" />
+			<item name="gunHandgunT1PistolParts" count="1,4" loot_prob_template="medLow" />
+		</lootgroup>
+		<lootgroup name="groupNPCSMG" loot_quality_template="QLTemplateT2">
+			<item name="gunHandgunT3SMG5" loot_prob_template="medHigh" />
+			<item group="groupNPCAmmo9mmBullet" loot_prob_template="med" />
+			<item name="gunHandgunT1PistolParts" count="1,4" loot_prob_template="medLow" />
+		</lootgroup>
+		<lootgroup name="groupNPCM60" loot_quality_template="QLTemplateT2">
+			<item name="gunMGT3M60" loot_prob_template="medHigh" />
+			<item group="groupNPCAmmo762mmBullet" loot_prob_template="med" />
+			<item name="gunMGT1AK47Parts" count="1,4" loot_prob_template="medLow" />
+		</lootgroup>
+		<lootgroup name="groupNPCAK47" loot_quality_template="QLTemplateT1">
+			<item name="gunMGT1AK47" loot_prob_template="medHigh" />
+			<item group="groupNPCAmmo762mmBullet" loot_prob_template="med" />
+			<item name="gunMGT1AK47Parts" count="1,4" loot_prob_template="medLow" />
+		</lootgroup>
+		<lootgroup name="groupNPCPipeMG" loot_quality_template="QLTemplateT0">
+			<item name="gunMGT0PipeMachineGun" loot_prob_template="medHigh" />
+			<item group="groupNPCAmmo9mmBullet" loot_prob_template="med" />
+		</lootgroup>
+		<lootgroup name="groupNPCTRifle" loot_quality_template="QLTemplateT1">
+			<item name="gunMGT2TacticalAR" loot_prob_template="medHigh" />
+			<item group="groupNPCAmmo762mmBullet" loot_prob_template="med" />
+			<item name="gunMGT1AK47Parts" count="1,4" loot_prob_template="medLow" />
+		</lootgroup>
+		<lootgroup name="groupNPCPipeRifle" loot_quality_template="QLTemplateT0">
+			<item name="gunRifleT0PipeRifle" loot_prob_template="medHigh" />
+			<item group="groupNPCAmmo762mmBullet" loot_prob_template="med" />
+		</lootgroup>
+		<lootgroup name="groupNPCHRifle" loot_quality_template="QLTemplateT0">
+			<item name="gunRifleT1HuntingRifle" loot_prob_template="medHigh" />
+			<item group="groupNPCAmmo762mmBullet" loot_prob_template="med" />
+			<item name="gunRifleT1HuntingRifleParts" count="1,4" loot_prob_template="medLow" />
+		</lootgroup>
+		<lootgroup name="groupNPCSRifle" loot_quality_template="QLTemplateT2">
+			<item name="gunRifleT3SniperRifle" loot_prob_template="medHigh" />
+			<item group="groupNPCAmmo762mmBullet" loot_prob_template="med" />
+			<item name="gunRifleT1HuntingRifleParts" count="1,4" loot_prob_template="medLow" />
+		</lootgroup>
+		<lootgroup name="groupNPCPipeShotgun" loot_quality_template="QLTemplateT0">
+			<item name="gunShotgunT0PipeShotgun" loot_prob_template="medHigh" />
+			<item group="groupNPCAmmoShotgun" loot_prob_template="med" />
+		</lootgroup>
+		<lootgroup name="groupNPCPShotgun" loot_quality_template="QLTemplateT1">
+			<item name="gunShotgunT2PumpShotgun" loot_prob_template="medHigh" />
+			<item group="groupNPCAmmoShotgun" loot_prob_template="med" />
+			<item name="gunShotgunT1DoubleBarrelParts" count="1,4" loot_prob_template="medLow" />
+		</lootgroup>
+		<lootgroup name="groupNPCAShotgun" loot_quality_template="QLTemplateT2">
+			<item name="gunShotgunT3AutoShotgun" loot_prob_template="medHigh" />
+			<item group="groupNPCAmmoShotgun" loot_prob_template="med" />
+			<item name="gunShotgunT1DoubleBarrelParts" count="1,4" loot_prob_template="medLow" />
+		</lootgroup>
+		<lootgroup name="groupNPCPrimitiveBow" loot_quality_template="QLTemplateT0">
+			<item name="gunBowT0PrimitiveBow" />
+		</lootgroup>
+		<lootgroup name="groupNPCWoodenBow" loot_quality_template="QLTemplateT1">
+			<item name="gunBowT1WoodenBow" />
+		</lootgroup>
+		<lootgroup name="groupNPCCompoundBow" loot_quality_template="QLTemplateT3">
+			<item name="gunBowT3CompoundBow" />
+		</lootgroup>
+		<lootgroup name="groupNPCLBow">
+			<item group="groupNPCPrimitiveBow" loot_prob_template="ProbT0" />
+			<item group="groupNPCWoodenBow" loot_prob_template="ProbT1Cap" />
+			<item group="groupNPCCompoundBow" loot_prob_template="ProbT2Cap" />
+			<item group="groupNPCAmmoArrow" loot_prob_template="low" />
+			<item name="gunBowT1WoodenBowParts" count="1,4" loot_prob_template="veryLow" />
+		</lootgroup>
+		<lootgroup name="groupNPCIronCrossbow" loot_quality_template="QLTemplateT1">
+			<item name="gunBowT1IronCrossbow" />
+		</lootgroup>
+		<lootgroup name="groupNPCCompoundCrossbow" loot_quality_template="QLTemplateT3">
+			<item name="gunBowT3CompoundCrossbow" />
+		</lootgroup>
+		<lootgroup name="groupNPCXBow">
+			<item group="groupNPCIronCrossbow" loot_prob_template="ProbT0" />
+			<item group="groupNPCCompoundCrossbow" loot_prob_template="ProbT2EarlyCap" />
+			<item group="groupNPCAmmoCrossbowBolt" loot_prob_template="low" />
+			<item name="gunBowT1WoodenBowParts" count="1,4" loot_prob_template="veryLow" />
+		</lootgroup>
+		<lootgroup name="groupNPCRocketL" loot_quality_template="QLTemplateT3">
+			<item name="gunExplosivesT3RocketLauncher" loot_prob_template="medHigh" />
+			<item group="groupAmmoRocket" loot_prob_template="med" />
+			<item name="gunExplosivesT3RocketLauncherParts" count="1,4" loot_prob_template="low" />
+		</lootgroup>
+
+		<!--
+			These are the groups that are actually used by the loot containers.
+			They have a count of "all" to guarantee one item from the weapon/ammo group,
+			plus a chance of some backpack items.
+		-->
+		<lootgroup name="groupCntNPCClub" count="all">
+			<item group="groupNPCClub" count="1" />
+			<item group="groupNPCBackpacks" loot_prob_template="medLow" force_prob="true" />
+		</lootgroup>
+		<lootgroup name="groupCntNPCKnife" count="all">
+			<item group="groupNPCKnife" count="1" />
+			<item group="groupNPCBackpacks" loot_prob_template="medLow" force_prob="true" />
+		</lootgroup>
+		<lootgroup name="groupCntNPCBat" count="all">
+			<item group="groupNPCBat" count="1" />
+			<item group="groupNPCBackpacks" loot_prob_template="medLow" force_prob="true" />
+		</lootgroup>
+		<lootgroup name="groupCntNPCAxe" count="all">
+			<item group="groupNPCAxe" count="1" />
+			<item group="groupNPCBackpacks" loot_prob_template="medLow" force_prob="true" />
+		</lootgroup>
+		<lootgroup name="groupCntNPCSpear" count="all">
+			<item group="groupNPCSpear" count="1" />
+			<item group="groupNPCBackpacks" loot_prob_template="medLow" force_prob="true" />
+		</lootgroup>
+		<lootgroup name="groupCntNPCMachete" count="all">
+			<item group="groupNPCMachete" count="1" />
+			<item group="groupNPCBackpacks" loot_prob_template="medLow" force_prob="true" />
+		</lootgroup>
+		<lootgroup name="groupCntNPCPipePistol" count="all">
+			<item group="groupNPCPipePistol" count="1" />
+			<item group="groupNPCBackpacks" loot_prob_template="medLow" force_prob="true" />
+		</lootgroup>
+		<lootgroup name="groupCntNPCPistol" count="all">
+			<item group="groupNPCPistol" count="1" />
+			<item group="groupNPCBackpacks" loot_prob_template="medLow" force_prob="true" />
+		</lootgroup>
+		<lootgroup name="groupCntNPCDPistol" count="all">
+			<item group="groupNPCDPistol" count="1" />
+			<item group="groupNPCBackpacks" loot_prob_template="medLow" force_prob="true" />
+		</lootgroup>
+		<lootgroup name="groupCntNPCSMG" count="all">
+			<item group="groupNPCSMG" count="1" />
+			<item group="groupNPCBackpacks" loot_prob_template="medLow" force_prob="true" />
+		</lootgroup>
+		<lootgroup name="groupCntNPCM60" count="all">
+			<item group="groupNPCM60" count="1" />
+			<item group="groupNPCBackpacks" loot_prob_template="medLow" force_prob="true" />
+		</lootgroup>
+		<lootgroup name="groupCntNPCAK47" count="all">
+			<item group="groupNPCAK47" count="1" />
+			<item group="groupNPCBackpacks" loot_prob_template="medLow" force_prob="true" />
+		</lootgroup>
+		<lootgroup name="groupCntNPCPipeMG" count="all">
+			<item group="groupNPCPipeMG" count="1" />
+			<item group="groupNPCBackpacks" loot_prob_template="medLow" force_prob="true" />
+		</lootgroup>
+		<lootgroup name="groupCntNPCTRifle" count="all">
+			<item group="groupNPCTRifle" count="1" />
+			<item group="groupNPCBackpacks" loot_prob_template="medLow" force_prob="true" />
+		</lootgroup>
+		<lootgroup name="groupCntNPCPipeRifle" count="all">
+			<item group="groupNPCPipeRifle" count="1" />
+			<item group="groupNPCBackpacks" loot_prob_template="medLow" force_prob="true" />
+		</lootgroup>
+		<lootgroup name="groupCntNPCHRifle" count="all">
+			<item group="groupNPCHRifle" count="1" />
+			<item group="groupNPCBackpacks" loot_prob_template="medLow" force_prob="true" />
+		</lootgroup>
+		<lootgroup name="groupCntNPCSRifle" count="all">
+			<item group="groupNPCSRifle" count="1" />
+			<item group="groupNPCBackpacks" loot_prob_template="medLow" force_prob="true" />
+		</lootgroup>
+		<lootgroup name="groupCntNPCPipeShotgun" count="all">
+			<item group="groupNPCPipeShotgun" count="1" />
+			<item group="groupNPCBackpacks" loot_prob_template="medLow" force_prob="true" />
+		</lootgroup>
+		<lootgroup name="groupCntNPCPShotgun" count="all">
+			<item group="groupNPCPShotgun" count="1" />
+			<item group="groupNPCBackpacks" loot_prob_template="medLow" force_prob="true" />
+		</lootgroup>
+		<lootgroup name="groupCntNPCAShotgun" count="all">
+			<item group="groupNPCAShotgun" count="1" />
+			<item group="groupNPCBackpacks" loot_prob_template="medLow" force_prob="true" />
+		</lootgroup>
+		<lootgroup name="groupCntNPCLBow" count="all">
+			<item group="groupNPCLBow" count="1" />
+			<item group="groupNPCBackpacks" loot_prob_template="medLow" force_prob="true" />
+		</lootgroup>
+		<lootgroup name="groupCntNPCXBow" count="all">
+			<item group="groupNPCXBow" count="1" />
+			<item group="groupNPCBackpacks" loot_prob_template="medLow" force_prob="true" />
+		</lootgroup>
+		<lootgroup name="groupCntNPCRocketL" count="all">
+			<item group="groupNPCRocketL" count="1" />
+			<item group="groupNPCBackpacks" loot_prob_template="medLow" force_prob="true" />
+		</lootgroup>
+		<!-- For Mechs that use "hidden pistols" (built-in weapons) -->
+		<lootgroup name="groupCntNPCPistolHidden" count="all">
+			<item group="groupNPCAmmo9mmBullet" />
+			<item name="gunHandgunT1PistolParts" count="1,4" loot_prob_template="medLow" force_prob="true" />
+			<item group="groupNPCMechBackpacks" />
+		</lootgroup>
+	</insertBefore>
+
+	<!--
+		Custom NPC loot containers.
+	-->
+	<append xpath="/lootcontainers">
+		<lootcontainer name="cntNPCEmptyHand" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" loot_quality_template="qualBaseTemplate">
+			<item group="groupNPCBackpacks" />
+		</lootcontainer>
+		<lootcontainer name="cntNPCClub" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" loot_quality_template="qualBaseTemplate">
+			<item group="groupCntNPCClub" />
+		</lootcontainer>
+		<lootcontainer name="cntNPCKnife" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" loot_quality_template="qualBaseTemplate">
+			<item group="groupCntNPCKnife" />
+		</lootcontainer>
+		<lootcontainer name="cntNPCBat" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" loot_quality_template="qualBaseTemplate">
+			<item group="groupCntNPCBat" />
+		</lootcontainer>
+		<lootcontainer name="cntNPCAxe" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" loot_quality_template="qualBaseTemplate">
+			<item group="groupCntNPCAxe" />
+		</lootcontainer>
+		<lootcontainer name="cntNPCSpear" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" loot_quality_template="qualBaseTemplate">
+			<item group="groupCntNPCSpear" />
+		</lootcontainer>
+		<lootcontainer name="cntNPCMachete" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" loot_quality_template="qualBaseTemplate">
+			<item group="groupCntNPCMachete" />
+		</lootcontainer>
+		<lootcontainer name="cntNPCPipePistol" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" loot_quality_template="qualBaseTemplate">
+			<item group="groupCntNPCPipePistol" />
+		</lootcontainer>
+		<lootcontainer name="cntNPCPistol" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" loot_quality_template="qualBaseTemplate">
+			<item group="groupCntNPCPistol" />
+		</lootcontainer>
+		<lootcontainer name="cntNPCDPistol" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" loot_quality_template="qualBaseTemplate">
+			<item group="groupCntNPCDPistol" />
+		</lootcontainer>
+		<lootcontainer name="cntNPCSMG" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" loot_quality_template="QLTemplateT0">
+			<item group="groupCntNPCSMG" />
+		</lootcontainer>
+		<lootcontainer name="cntNPCM60" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" loot_quality_template="qualBaseTemplate">
+			<item group="groupCntNPCM60" />
+		</lootcontainer>
+		<lootcontainer name="cntNPCAK47" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" loot_quality_template="qualBaseTemplate">
+			<item group="groupCntNPCAK47" />
+		</lootcontainer>
+		<lootcontainer name="cntNPCPipeMG" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" loot_quality_template="qualBaseTemplate">
+			<item group="groupCntNPCPipeMG" />
+		</lootcontainer>
+		<lootcontainer name="cntNPCTRifle" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" loot_quality_template="qualBaseTemplate">
+			<item group="groupCntNPCTRifle" />
+		</lootcontainer>
+		<lootcontainer name="cntNPCPipeRifle" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" loot_quality_template="qualBaseTemplate">
+			<item group="groupCntNPCPipeRifle" />
+		</lootcontainer>
+		<lootcontainer name="cntNPCHRifle" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" loot_quality_template="qualBaseTemplate">
+			<item group="groupCntNPCHRifle" />
+		</lootcontainer>
+		<lootcontainer name="cntNPCSRifle" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" loot_quality_template="qualBaseTemplate">
+			<item group="groupCntNPCSRifle" />
+		</lootcontainer>
+		<lootcontainer name="cntNPCPipeShotgun" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" loot_quality_template="qualBaseTemplate">
+			<item group="groupCntNPCPipeShotgun" />
+		</lootcontainer>
+		<lootcontainer name="cntNPCPShotgun" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" loot_quality_template="qualBaseTemplate">
+			<item group="groupCntNPCPShotgun" />
+		</lootcontainer>
+		<lootcontainer name="cntNPCAShotgun" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" loot_quality_template="qualBaseTemplate">
+			<item group="groupCntNPCAShotgun" />
+		</lootcontainer>
+		<lootcontainer name="cntNPCLBow" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" loot_quality_template="qualBaseTemplate">
+			<item group="groupCntNPCLBow" />
+		</lootcontainer>
+		<lootcontainer name="cntNPCXBow" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" loot_quality_template="qualBaseTemplate">
+			<item group="groupCntNPCXBow" />
+		</lootcontainer>
+		<lootcontainer name="cntNPCRocketL" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" loot_quality_template="qualBaseTemplate">
+			<item group="groupCntNPCRocketL" />
+		</lootcontainer>
+		<!-- For Mechs that use "hidden pistols" (built-in weapons) -->
+		<lootcontainer name="cntNPCPistolHidden" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" loot_quality_template="qualBaseTemplate">
+			<item group="groupCntNPCPistolHidden" />
+		</lootcontainer>
+		<!-- For Mechs that don't use "hidden pistols" -->
+		<lootcontainer name="cntNPCMech" count="1" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" loot_quality_template="qualBaseTemplate">
+			<item group="groupNPCMechBackpacks" />
+		</lootcontainer>
+	</append>
 
 </configs>

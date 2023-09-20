@@ -310,8 +310,8 @@
 			<property name="JumpMaxDistance" value="2.8, 3.9"/> 
 			<property name="Immunity" value="sickness;disease;wellness"/> 
 			<property name="ExperienceGain" value="600"/> 
-			<property name="LootDropProb" value="0.0"/> 
-			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
+			<property name="LootDropProb" value="0.2" /> 
+			<property name="LootDropEntityClass" value="EntityNPCLootContainer" />
 			<!--<property name="LootDropEntityClass" value="EntityLootContainerNPC"/>-->
 			<!--<property name="MapIcon" value="ui_game_symbol_bullet_point"/> -->
 			<property name="Names" value="" />
@@ -735,6 +735,7 @@
 			<property name="HireCurrency" value="casinoCoin" />
 			<property name="HireCost" value="1000" />
 			<property name="ExperienceGain" value="600"/> 
+			<property name="LootDropEntityClass" value="EntityNPCLootContainerClub" />
 		</entity_class>
 		
 		<!-- Weapon template for bloodmoon  -->
@@ -757,6 +758,7 @@
 			<property name="Class" value="EntityBandit" /> 
 			<property name="HandItem" value="meleeNPCClubWood"/>
 			<property name="RightHandJointName" value="Club" />
+			<property name="LootDropEntityClass" value="EntityNPCLootContainerClub" />
 		</entity_class>	
 		
 
@@ -788,6 +790,7 @@
 			<property name="HireCurrency" value="casinoCoin" />
 			<property name="HireCost" value="750" />
 			<property name="ExperienceGain" value="600"/> 
+			<property name="LootDropEntityClass" value="EntityNPCLootContainerKnife" />
 		</entity_class>	
 		
 		<entity_class name="npcBMKnifeTemplate" extends="npcKnifeTemplate">
@@ -807,6 +810,7 @@
 			<property name="Class" value="EntityBandit" /> 
 			<property name="HandItem" value="meleeNPCKnife"/>
 			<property name="RightHandJointName" value="Knife" />
+			<property name="LootDropEntityClass" value="EntityNPCLootContainerKnife" />
 		</entity_class>	
 		
 		<!-- Weapon template for advanced, hireable characters  -->
@@ -835,6 +839,7 @@
 			<property name="HireCurrency" value="casinoCoin" />
 			<property name="HireCost" value="1000" />
 			<property name="ExperienceGain" value="600"/>
+			<property name="LootDropEntityClass" value="EntityNPCLootContainerBat" />
 		</entity_class>	
 		
 		<entity_class name="npcBMBatTemplate" extends="npcBatTemplate">
@@ -855,6 +860,7 @@
 			<property name="Class" value="EntityBandit" /> 
 			<property name="HandItem" value="meleeNPCBatWood"/>
 			<property name="RightHandJointName" value="Bat" />
+			<property name="LootDropEntityClass" value="EntityNPCLootContainerBat" />
 		</entity_class>	
 		
 		
@@ -887,6 +893,7 @@
 			<property name="HireCurrency" value="casinoCoin" />
 			<property name="HireCost" value="1000" />
 			<property name="ExperienceGain" value="600"/>
+			<property name="LootDropEntityClass" value="EntityNPCLootContainerAxe" />
 		</entity_class>		
 
 		<entity_class name="npcBMAxeTemplate" extends="npcAxeTemplate">
@@ -907,6 +914,7 @@
 			<property name="Class" value="EntityBandit" /> 
 			<property name="HandItem" value="meleeNPCAxe"/>
 			<property name="RightHandJointName" value="Axe" />
+			<property name="LootDropEntityClass" value="EntityNPCLootContainerAxe" />
 		</entity_class>	
 
 		<!-- Weapon template for advanced, hireable characters  -->
@@ -935,6 +943,7 @@
 			<property name="HireCurrency" value="casinoCoin" />
 			<property name="HireCost" value="1000" />
 			<property name="ExperienceGain" value="600"/>
+			<property name="LootDropEntityClass" value="EntityNPCLootContainerSpear" />
 		</entity_class>		
 		
 		<entity_class name="npcBMSpearTemplate" extends="npcSpearTemplate">
@@ -954,6 +963,7 @@
 			<property name="Class" value="EntityBandit" /> 
 			<property name="HandItem" value="meleeNPCSpear"/>
 			<property name="RightHandJointName" value="Spear" />
+			<property name="LootDropEntityClass" value="EntityNPCLootContainerSpear" />
 		</entity_class>	
 
 		<!-- Weapon template for advanced, hireable characters  -->
@@ -982,6 +992,7 @@
 			<property name="HireCurrency" value="casinoCoin" />
 			<property name="HireCost" value="1000" />
 			<property name="ExperienceGain" value="600"/>
+			<property name="LootDropEntityClass" value="EntityNPCLootContainerMachete" />
 		</entity_class>	
 		
 		<entity_class name="npcBMMacheteTemplate" extends="npcMacheteTemplate">
@@ -1001,6 +1012,7 @@
 			<property name="Class" value="EntityBandit" /> 
 			<property name="HandItem" value="meleeNPCMachete"/>
 			<property name="RightHandJointName" value="Machete" />
+			<property name="LootDropEntityClass" value="EntityNPCLootContainerMachete" />
 		</entity_class>	
 
 		<!-- Weapon template for advanced, hireable characters  -->
@@ -1029,6 +1041,7 @@
 			<property name="HireCurrency" value="casinoCoin" />
 			<property name="HireCost" value="1250" />
 			<property name="ExperienceGain" value="1000"/>
+			<property name="LootDropEntityClass" value="EntityNPCLootContainerPipePistol" />
 		</entity_class>	
 		
 		<entity_class name="npcBMPipePistolTemplate" extends="npcPipePistolTemplate">
@@ -1049,6 +1062,7 @@
 			<property name="HandItem" value="gunNPCPipePistol"/>
 			<property name="RightHandJointName" value="PipePistol" />
 			<property name="AITask-5" value="RangedAttackTarget" data="itemType=1;cooldown=4;duration=6;minRange=2;maxRange=15;unreachableRange=40"/>  <!-- set duration == rounds?  -->
+			<property name="LootDropEntityClass" value="EntityNPCLootContainerPipePisol" />
 		</entity_class>	
 		
 		<entity_class name="npcBanditPipePistolTemplate2" extends="npcRanged2BanditTemplate"> <!--  EAI testing on PipePistol  -->
@@ -1060,6 +1074,7 @@
 			<property name="Class" value="EntityBandit" /> 
 			<property name="HandItem" value="gunNPCPipePistol"/>
 			<property name="RightHandJointName" value="PipePistol" />
+			<property name="LootDropEntityClass" value="EntityNPCLootContainerPipePistol" />
 		</entity_class>	
 		
 
@@ -1089,6 +1104,7 @@
 			<property name="HireCurrency" value="casinoCoin" />
 			<property name="HireCost" value="2250" />
 			<property name="ExperienceGain" value="1200"/>
+			<property name="LootDropEntityClass" value="EntityNPCLootContainerPistol" />
 		</entity_class>		
 		
 		<entity_class name="npcBMPistolTemplate" extends="npcPistolTemplate">
@@ -1126,6 +1142,7 @@
 			<property name="HireCurrency" value="casinoCoin" />
 			<property name="HireCost" value="2750" />
 			<property name="ExperienceGain" value="1400"/>
+			<property name="LootDropEntityClass" value="EntityNPCLootContainerDPistol" />
 		</entity_class>	
 
 		<entity_class name="npcBMDPistolTemplate" extends="npcDPistolTemplate">
@@ -1164,6 +1181,7 @@
 			<property name="HireCurrency" value="casinoCoin" />
 			<property name="HireCost" value="3250" />
 			<property name="ExperienceGain" value="1400"/>
+			<property name="LootDropEntityClass" value="EntityNPCLootContainerSMG" />
 		</entity_class>	
 		
 		<entity_class name="npcBMSMGTemplate" extends="npcSMGTemplate">
@@ -1202,6 +1220,7 @@
 			<property name="HireCurrency" value="casinoCoin" />
 			<property name="HireCost" value="3500" />
 			<property name="ExperienceGain" value="1400"/>
+			<property name="LootDropEntityClass" value="EntityNPCLootContainerM60" />
 		</entity_class>	
 		
 		<entity_class name="npcBMM60Template" extends="npcM60Template">
@@ -1238,6 +1257,7 @@
 			<property name="HireCurrency" value="casinoCoin" />
 			<property name="HireCost" value="3250" />
 			<property name="ExperienceGain" value="1200"/>
+			<property name="LootDropEntityClass" value="EntityNPCLootContainerAK47" />
 		</entity_class>
 		
 		<entity_class name="npcBMAK47Template" extends="npcAK47Template">
@@ -1274,6 +1294,7 @@
 			<property name="HireCurrency" value="casinoCoin" />
 			<property name="HireCost" value="1750" />
 			<property name="ExperienceGain" value="1000"/>
+			<property name="LootDropEntityClass" value="EntityNPCLootContainerPipeMG" />
 		</entity_class>	
 
 		<entity_class name="npcBMPipeMGTemplate" extends="npcPipeMGTemplate">
@@ -1311,6 +1332,7 @@
 			<property name="HireCurrency" value="casinoCoin" />
 			<property name="HireCost" value="3500" />
 			<property name="ExperienceGain" value="1200"/>
+			<property name="LootDropEntityClass" value="EntityNPCLootContainerTRifle" />
 		</entity_class>	
 		
 		<entity_class name="npcBMTRifleTemplate" extends="npcTRifleTemplate">
@@ -1348,6 +1370,7 @@
 			<property name="HireCurrency" value="casinoCoin" />
 			<property name="HireCost" value="1000" />
 			<property name="ExperienceGain" value="800"/>
+			<property name="LootDropEntityClass" value="EntityNPCLootContainerPipeRifle" />
         </entity_class>    
 
 		<entity_class name="npcBMPipeRifleTemplate" extends="npcPipeRifleTemplate">
@@ -1384,6 +1407,7 @@
 			<property name="HireCurrency" value="casinoCoin" />
 			<property name="HireCost" value="1250" />
 			<property name="ExperienceGain" value="1000"/>
+			<property name="LootDropEntityClass" value="EntityNPCLootContainerHRifle" />
         </entity_class> 
 
  		<entity_class name="npcBMHRifleTemplate" extends="npcHRifleTemplate">
@@ -1420,6 +1444,7 @@
 			<property name="HireCurrency" value="casinoCoin" />
 			<property name="HireCost" value="3250" />
 			<property name="ExperienceGain" value="1400"/>
+			<property name="LootDropEntityClass" value="EntityNPCLootContainerSRifle" />
         </entity_class>  
 
 		<entity_class name="npcBMSRifleTemplate" extends="npcSRifleTemplate">
@@ -1456,6 +1481,7 @@
 			<property name="HireCurrency" value="casinoCoin" />
 			<property name="HireCost" value="1250" />
 			<property name="ExperienceGain" value="800"/>
+			<property name="LootDropEntityClass" value="EntityNPCLootContainerPipeShotgun" />
 		</entity_class> 
 
 		<entity_class name="npcBMPipeShotgunTemplate" extends="npcPipeShotgunTemplate">
@@ -1492,6 +1518,7 @@
 			<property name="HireCurrency" value="casinoCoin" />
 			<property name="HireCost" value="2250" />
 			<property name="ExperienceGain" value="1200"/>
+			<property name="LootDropEntityClass" value="EntityNPCLootContainerPShotgun" />
 		</entity_class> 
 		
 		<entity_class name="npcBMPShotgunTemplate" extends="npcPShotgunTemplate">
@@ -1528,6 +1555,7 @@
 			<property name="HireCurrency" value="casinoCoin" />
 			<property name="HireCost" value="3500" />
 			<property name="ExperienceGain" value="1400"/>
+			<property name="LootDropEntityClass" value="EntityNPCLootContainerAShotgun" />
 		</entity_class>
 
 		<entity_class name="npcBMAShotgunTemplate" extends="npcAShotgunTemplate">
@@ -1564,6 +1592,7 @@
 			<property name="HireCurrency" value="casinoCoin" />
 			<property name="HireCost" value="2000" />
 			<property name="ExperienceGain" value="800"/>
+			<property name="LootDropEntityClass" value="EntityNPCLootContainerLBow" />
 		</entity_class> 
 
 		<entity_class name="npcBMLBowTemplate" extends="npcLBowTemplate">
@@ -1600,6 +1629,7 @@
 			<property name="HireCurrency" value="casinoCoin" />
 			<property name="HireCost" value="2500" />
 			<property name="ExperienceGain" value="1000"/>
+			<property name="LootDropEntityClass" value="EntityNPCLootContainerXBow" />
 			<!-- For testing launcher version  -->
 			<!-- <property name="ItemsOnEnterGame.GameModeSurvival" value="gunNPCXBow,ammoNPCCrossbowBoltIron2"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunNPCXBow,ammoNPCCrossbowBoltIron2"/>
@@ -1642,6 +1672,7 @@
 			<property name="HireCurrency" value="casinoCoin" />
 			<property name="HireCost" value="3000" />
 			<property name="ExperienceGain" value="1400"/>
+			<property name="LootDropEntityClass" value="EntityNPCLootContainerRocketL" />
 		</entity_class>	
 
 		<entity_class name="npcBMRocketLTemplate" extends="npcRocketLTemplate">
@@ -2483,6 +2514,7 @@
 			<property name="Names" value="KITT,HK-47,ED-209,Clank,Johnny5,Roboto,Marvin,Robbie,Rosie,HAL9000,GLaDOS,Bender" />		
 			<property name="HireCurrency" value="carBattery" />
 			<property name="HireCost" value="1" />
+			<property name="LootDropEntityClass" value="EntityNPCLootContainerMech" />
 		</entity_class> 
 		
 		<entity_class name="NPCMechMeleeTemplate" extends="npcMechMeleeTemplate" > <!-- for backwards compatibility  -->
@@ -3161,7 +3193,6 @@
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
 			<property name="LootDropProb" value="0.2"/> 
-			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 			<!-- <property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/> -->
 		</entity_class>	
 		
@@ -3197,7 +3228,6 @@
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
 			<property name="LootDropProb" value="0.2"/> 
-			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 		</entity_class>
 		
 		<entity_class name="npcHarleyKnife" extends="npcBanditKnifeTemplate"> 
@@ -3223,7 +3253,6 @@
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
 			<property name="LootDropProb" value="0.2"/> 
-			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 		</entity_class>	
 		
 		<entity_class name="npcHarleyBat" extends="npcBanditBatTemplate"> 
@@ -3249,7 +3278,6 @@
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
 			<property name="LootDropProb" value="0.2"/> 
-			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>	
 		</entity_class>			
 	
 		<entity_class name="npcHarleyMachete" extends="npcBanditMacheteTemplate"> 
@@ -3275,7 +3303,6 @@
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
 			<property name="LootDropProb" value="0.2"/> 
-			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 		</entity_class>		
 
 
@@ -3302,7 +3329,6 @@
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
 			<property name="LootDropProb" value="0.2"/> 
-			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 		</entity_class>	
 		
 		<entity_class name="npcHarleySpear" extends="npcBanditSpearTemplate"> 
@@ -3328,7 +3354,6 @@
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
 			<property name="LootDropProb" value="0.2"/> 
-			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>	
 		</entity_class>			
 		
 		<entity_class name="npcHarleyPipePistol" extends="npcPipePistolTemplate"> 
@@ -3356,7 +3381,6 @@
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
 			<property name="LootDropProb" value="0.2"/> 
-			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>	
 			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/> 
 		</entity_class>	
 		
@@ -3383,7 +3407,6 @@
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
 			<property name="LootDropProb" value="0.2"/> 
-			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>	
 			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/> 
 		</entity_class>	
 		
@@ -3410,7 +3433,6 @@
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
 			<property name="LootDropProb" value="0.2"/> 
-			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>	
 			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/> 
 		</entity_class>				
 		
@@ -3437,7 +3459,6 @@
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
 			<property name="LootDropProb" value="0.2"/> 
-			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>	
 			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/> 
 			<property name="MaxViewAngle" value="270"/> 
 		</entity_class>	
@@ -3465,7 +3486,6 @@
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
 			<property name="LootDropProb" value="0.2"/> 
-			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>	
 			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/> 
 		</entity_class>	
 		
@@ -3492,7 +3512,6 @@
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
 			<property name="LootDropProb" value="0.2"/> 
-			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>	
 			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/> 
 		</entity_class>			
 		
@@ -3519,7 +3538,6 @@
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
 			<property name="LootDropProb" value="0.2"/> 
-			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>	
 			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/> 
 		</entity_class>				
 		
@@ -3546,7 +3564,6 @@
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
 			<property name="LootDropProb" value="0.2"/> 
-			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/> 
 		</entity_class>				
 
@@ -3573,7 +3590,6 @@
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
 			<property name="LootDropProb" value="0.2"/> 
-			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>	
 			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/> 
 		</entity_class>
 		
@@ -3600,7 +3616,6 @@
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
 			<property name="LootDropProb" value="0.2"/> 
-			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>	
 			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/> 
 		</entity_class>		
 		
@@ -3627,7 +3642,6 @@
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
 			<property name="LootDropProb" value="0.2"/> 
-			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>	
 			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/> 
 		</entity_class>
 
@@ -3654,7 +3668,6 @@
 			<property name="SoundAttack" value="HarleyAttack" />
 			<property name="SoundSense" value="HarleySense" />
 			<property name="LootDropProb" value="0.2" />
-			<property name="LootDropEntityClass" value="EntityLootContainerRegular" />
 			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/> 
 		</entity_class>
 
@@ -3681,7 +3694,6 @@
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
 			<property name="LootDropProb" value="0.2"/> 
-			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>	
 			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/> 
         </entity_class>   
 
@@ -3708,7 +3720,6 @@
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
 			<property name="LootDropProb" value="0.2"/> 
-			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>	
 			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/> 
         </entity_class>   	
 		
@@ -3735,7 +3746,6 @@
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
 			<property name="LootDropProb" value="0.2"/> 
-			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>	
 			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/> 
 		</entity_class> 
 
@@ -3762,7 +3772,6 @@
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
 			<property name="LootDropProb" value="0.2"/> 
-			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>	
 			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/> 
 		</entity_class>	
 		<entity_class name="npcHarleyRocketL" extends="npcRocketLTemplate"> 
@@ -3788,7 +3797,6 @@
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
 			<property name="LootDropProb" value="0.2"/> 
-			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 			<property name="AIPackages" value="NPCModCoreNoChat, NPCModHostileMeleeBasic, NPCModHostileRangedBasic"/> 
 		</entity_class>	
 		<entity_class name="npcHarleyVomitHand" extends="npcMeleeTemplate"> <!-- testing -->
@@ -4049,7 +4057,7 @@
 		<entity_class name="EntityLootContainerNPC">
 			<property name="Class" value="EntityLootContainer"/>
 			<property name="UserSpawnType" value="Console"/>
-			<property name="Mesh" value="@:Entities/LootContainers/zpackPrefab.prefab"/>
+			<property name="Mesh" value="@:Entities/LootContainers/backpack_droppedPrefab.prefab" />
 			<property name="ModelType" value="Custom"/>
 			<property name="Prefab" value="Backpack"/>
 			<property name="Parent" value="Backpack"/>
@@ -4071,6 +4079,117 @@
 			<property name="LootListOnDeath" value="playerBackpack"/>
 			<property name="Faction" value="none"/>
 			<property name="NavObject" value="backpack" />
+		</entity_class>
+
+		<!-- Custom loot drop containers by weapon -->
+		<entity_class name="EntityNPCLootContainer" extends="EntityLootContainerNPC">
+			<property name="HideInSpawnMenu" value="true" />
+			<property name="LootListOnDeath" value="cntNPCEmptyHand" />
+		</entity_class>
+		<entity_class name="EntityNPCLootContainerClub" extends="EntityLootContainerNPC">
+			<property name="HideInSpawnMenu" value="true" />
+			<property name="LootListOnDeath" value="cntNPCClub" />
+		</entity_class>
+		<entity_class name="EntityNPCLootContainerKnife" extends="EntityLootContainerNPC">
+			<property name="HideInSpawnMenu" value="true" />
+			<property name="LootListOnDeath" value="cntNPCKnife" />
+		</entity_class>
+		<entity_class name="EntityNPCLootContainerBat" extends="EntityLootContainerNPC">
+			<property name="HideInSpawnMenu" value="true" />
+			<property name="LootListOnDeath" value="cntNPCBat" />
+		</entity_class>
+		<entity_class name="EntityNPCLootContainerAxe" extends="EntityLootContainerNPC">
+			<property name="HideInSpawnMenu" value="true" />
+			<property name="LootListOnDeath" value="cntNPCAxe" />
+		</entity_class>
+		<entity_class name="EntityNPCLootContainerSpear" extends="EntityLootContainerNPC">
+			<property name="HideInSpawnMenu" value="true" />
+			<property name="LootListOnDeath" value="cntNPCSpear" />
+		</entity_class>
+		<entity_class name="EntityNPCLootContainerMachete" extends="EntityLootContainerNPC">
+			<property name="HideInSpawnMenu" value="true" />
+			<property name="LootListOnDeath" value="cntNPCMachete" />
+		</entity_class>
+		<entity_class name="EntityNPCLootContainerPipePistol" extends="EntityLootContainerNPC">
+			<property name="HideInSpawnMenu" value="true" />
+			<property name="LootListOnDeath" value="cntNPCPipePistol" />
+		</entity_class>
+		<entity_class name="EntityNPCLootContainerPistol" extends="EntityLootContainerNPC">
+			<property name="HideInSpawnMenu" value="true" />
+			<property name="LootListOnDeath" value="cntNPCPistol" />
+		</entity_class>
+		<!--
+			This is the loot container used by Mechs with "hidden pistols" (built-in weapons).
+			These entities shouldn't drop any weapons, but they may drop ammo or parts.
+			There are no NPC Core Mechs that use these weapons, but packs may have them.
+		-->
+		<entity_class name="EntityNPCLootContainerPistolHidden" extends="EntityLootContainerNPC">
+			<property name="HideInSpawnMenu" value="true" />
+			<property name="LootListOnDeath" value="cntNPCPistolHidden" />
+		</entity_class>
+		<entity_class name="EntityNPCLootContainerDPistol" extends="EntityLootContainerNPC">
+			<property name="HideInSpawnMenu" value="true" />
+			<property name="LootListOnDeath" value="cntNPCDPistol" />
+		</entity_class>
+		<entity_class name="EntityNPCLootContainerSMG" extends="EntityLootContainerNPC">
+			<property name="HideInSpawnMenu" value="true" />
+			<property name="LootListOnDeath" value="cntNPCSMG" />
+		</entity_class>
+		<entity_class name="EntityNPCLootContainerM60" extends="EntityLootContainerNPC">
+			<property name="HideInSpawnMenu" value="true" />
+			<property name="LootListOnDeath" value="cntNPCM60" />
+		</entity_class>
+		<entity_class name="EntityNPCLootContainerAK47" extends="EntityLootContainerNPC">
+			<property name="HideInSpawnMenu" value="true" />
+			<property name="LootListOnDeath" value="cntNPCAK47" />
+		</entity_class>
+		<entity_class name="EntityNPCLootContainerPipeMG" extends="EntityLootContainerNPC">
+			<property name="HideInSpawnMenu" value="true" />
+			<property name="LootListOnDeath" value="cntNPCPipeMG" />
+		</entity_class>
+		<entity_class name="EntityNPCLootContainerTRifle" extends="EntityLootContainerNPC">
+			<property name="HideInSpawnMenu" value="true" />
+			<property name="LootListOnDeath" value="cntNPCTRifle" />
+		</entity_class>
+		<entity_class name="EntityNPCLootContainerPipeRifle" extends="EntityLootContainerNPC">
+			<property name="HideInSpawnMenu" value="true" />
+			<property name="LootListOnDeath" value="cntNPCPipeRifle" />
+		</entity_class>
+		<entity_class name="EntityNPCLootContainerHRifle" extends="EntityLootContainerNPC">
+			<property name="HideInSpawnMenu" value="true" />
+			<property name="LootListOnDeath" value="cntNPCHRifle" />
+		</entity_class>
+		<entity_class name="EntityNPCLootContainerSRifle" extends="EntityLootContainerNPC">
+			<property name="HideInSpawnMenu" value="true" />
+			<property name="LootListOnDeath" value="cntNPCSRifle" />
+		</entity_class>
+		<entity_class name="EntityNPCLootContainerPipeShotgun" extends="EntityLootContainerNPC">
+			<property name="HideInSpawnMenu" value="true" />
+			<property name="LootListOnDeath" value="cntNPCPipeShotgun" />
+		</entity_class>
+		<entity_class name="EntityNPCLootContainerPShotgun" extends="EntityLootContainerNPC">
+			<property name="HideInSpawnMenu" value="true" />
+			<property name="LootListOnDeath" value="cntNPCPShotgun" />
+		</entity_class>
+		<entity_class name="EntityNPCLootContainerAShotgun" extends="EntityLootContainerNPC">
+			<property name="HideInSpawnMenu" value="true" />
+			<property name="LootListOnDeath" value="cntNPCAShotgun" />
+		</entity_class>
+		<entity_class name="EntityNPCLootContainerLBow" extends="EntityLootContainerNPC">
+			<property name="HideInSpawnMenu" value="true" />
+			<property name="LootListOnDeath" value="cntNPCLBow" />
+		</entity_class>
+		<entity_class name="EntityNPCLootContainerXBow" extends="EntityLootContainerNPC">
+			<property name="HideInSpawnMenu" value="true" />
+			<property name="LootListOnDeath" value="cntNPCXBow" />
+		</entity_class>
+		<entity_class name="EntityNPCLootContainerRocketL" extends="EntityLootContainerNPC">
+			<property name="HideInSpawnMenu" value="true" />
+			<property name="LootListOnDeath" value="cntNPCRocketL" />
+		</entity_class>
+		<entity_class name="EntityNPCLootContainerMech" extends="EntityLootContainerNPC">
+			<property name="HideInSpawnMenu" value="true" />
+			<property name="LootListOnDeath" value="cntNPCMech" />
 		</entity_class>
 		
 		<!--  NPC and Dumb animals  -->	
