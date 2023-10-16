@@ -1,0 +1,108 @@
+<configs>
+
+	<csv xpath="/entitygroups/entitygroup[@name='EnemyAnimalsWasteland']/text()" delim="\n" op="add" >
+		animalSpider01, 10
+		animalSpider02, 10
+		animalSpider03, 10
+	</csv>
+	<csv xpath="/entitygroups/entitygroup[@name='EnemyAnimalsDesert']/text()" delim="\n" op="add" >
+		animalSpider01, 5
+		animalSpider02, 5
+		animalSpider03, 5
+	</csv>
+	<!--
+		Entity groups used by spawners for sleeper volumes
+		TODO:
+		200 health / 15 damage - same as (non-dire) wolf
+	-->
+	<csv xpath="/entitygroups/entitygroup[@name='npcEnemyAnimalsAllGroupGS01']/text()" delim="\n" op="add" >
+		animalSpider01, 0.9
+		animalSpider02, 0.9
+		animalSpider03, 0.9
+	</csv>
+	<csv xpath="/entitygroups/entitygroup[@name='npcEnemyAnimalsAllGroupGS50']/text()" delim="\n" op="add" >
+		animalSpider01, 0.7
+		animalSpider02, 0.7
+		animalSpider03, 0.7
+	</csv>
+	<csv xpath="/entitygroups/entitygroup[@name='npcEnemyAnimalsAllGroupGS100']/text()" delim="\n" op="add" >
+		animalSpider01, 0.6
+		animalSpider02, 0.6
+		animalSpider03, 0.6
+	</csv>
+	<csv xpath="/entitygroups/entitygroup[@name='npcEnemyAnimalsAllGroupGS200']/text()" delim="\n" op="add" >
+		animalSpider01, 0.4
+		animalSpider02, 0.4
+		animalSpider03, 0.4
+	</csv>
+	<csv xpath="/entitygroups/entitygroup[@name='npcEnemyAnimalsAllGroupGS400']/text()" delim="\n" op="add" >
+		animalSpider01, 0.3
+		animalSpider02, 0.3
+		animalSpider03, 0.3
+	</csv>
+	<csv xpath="/entitygroups/entitygroup[@name='npcEnemyAnimalsAllGroupGS800']/text()" delim="\n" op="add" >
+		animalSpider01, 0.1
+		animalSpider02, 0.1
+		animalSpider03, 0.1
+	</csv>
+	<csv xpath="/entitygroups/entitygroup[@name='npcArachnidsAllGroupGS01']/text()" delim="\n" op="add" >
+		animalSpider01, 0.9
+		animalSpider02, 0.9
+		animalSpider03, 0.9
+	</csv>
+	<csv xpath="/entitygroups/entitygroup[@name='npcArachnidsAllGroupGS50']/text()" delim="\n" op="add" >
+		animalSpider01, 0.7
+		animalSpider02, 0.7
+		animalSpider03, 0.7
+	</csv>
+	<csv xpath="/entitygroups/entitygroup[@name='npcArachnidsAllGroupGS100']/text()" delim="\n" op="add" >
+		animalSpider01, 0.6
+		animalSpider02, 0.6
+		animalSpider03, 0.6
+	</csv>
+	<csv xpath="/entitygroups/entitygroup[@name='npcArachnidsAllGroupGS200']/text()" delim="\n" op="add" >
+		animalSpider01, 0.4
+		animalSpider02, 0.4
+		animalSpider03, 0.4
+	</csv>
+	<csv xpath="/entitygroups/entitygroup[@name='npcArachnidsAllGroupGS400']/text()" delim="\n" op="add" >
+		animalSpider01, 0.3
+		animalSpider02, 0.3
+		animalSpider03, 0.3
+	</csv>
+	<csv xpath="/entitygroups/entitygroup[@name='npcArachnidsAllGroupGS800']/text()" delim="\n" op="add" >
+		animalSpider01, 0.1
+		animalSpider02, 0.1
+		animalSpider03, 0.1
+	</csv>
+	<csv xpath="/entitygroups/entitygroup[@name='npcArachnidsBossGroupGS01']/text()" delim="\n" op="add" >
+		animalSpider01, 0.09
+		animalSpider02, 0.09
+		animalSpider03, 0.09
+	</csv>
+	<csv xpath="/entitygroups/entitygroup[@name='npcArachnidsBossGroupGS50']/text()" delim="\n" op="add" >
+		animalSpider01, 0.07
+		animalSpider02, 0.07
+		animalSpider03, 0.07
+	</csv>
+	<csv xpath="/entitygroups/entitygroup[@name='npcArachnidsBossGroupGS100']/text()" delim="\n" op="add" >
+		animalSpider01, 0.06
+		animalSpider02, 0.06
+		animalSpider03, 0.06
+	</csv>
+	<csv xpath="/entitygroups/entitygroup[@name='npcArachnidsBossGroupGS200']/text()" delim="\n" op="add" >
+		animalSpider01, 0.04
+		animalSpider02, 0.04
+		animalSpider03, 0.04
+	</csv>
+	<csv xpath="/entitygroups/entitygroup[@name='npcArachnidsBossGroupGS400']/text()" delim="\n" op="add" >
+		animalSpider01, 0.03
+		animalSpider02, 0.03
+		animalSpider03, 0.03
+	</csv>
+	<csv xpath="/entitygroups/entitygroup[@name='npcArachnidsBossGroupGS800']/text()" delim="\n" op="add" >
+		animalSpider01, 0.01
+		animalSpider02, 0.01
+		animalSpider03, 0.01
+	</csv>
+</configs>
