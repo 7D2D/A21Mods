@@ -311,6 +311,7 @@
       <statement id="start" text="dialog_trader_statement_start">
         <response_entry id="TellMe" />
         <response_entry id="FollowMe" />
+		<response_entry id="Pickup" />
         <response_entry id="ShowMe" />
         <response_entry id="StayHere" />
         <response_entry id="GuardHere" />
@@ -395,6 +396,11 @@
         <requirement type="Leader, SCore" requirementtype="Hide" />
         <action type="ExecuteCommandSDX, SCore" id="Dismiss" />
         <action type="AddBuffSDX, SCore" value="Self" id="buffOrderDismiss" />
+      </response>
+	  
+	  <response id="Pickup" text="GenericNPC_Pickup" ref_text="Pick Me up!">
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="PickUpNPC, SCore" />
       </response>
     
       <response id="done" text="dialog_trader_response_nevermind" />
