@@ -5,7 +5,7 @@
 			<ingredient name="resourceElectricParts" count="10"/>
 			<ingredient name="switch" count="1"/>
 			<ingredient name="speaker" count="1"/>
-			<ingredient name="glassBusinessPlateCurved" count="1"/>
+			<ingredient name="glassBlockVariantHelper" count="1"/>
 		</recipe>
 		
 		<recipe name="TVWall" count="1" craft_area="workbench" >
@@ -13,7 +13,7 @@
 			<ingredient name="resourceElectricParts" count="10"/>
 			<ingredient name="switch" count="1"/>
 			<ingredient name="speaker" count="1"/>
-			<ingredient name="glassBusinessPlateCurved" count="1"/>
+			<ingredient name="glassBlockVariantHelper" count="1"/>
 		</recipe>
 		
 		<recipe name="TheaterScreen" count="1" craft_area="workbench" >
@@ -21,7 +21,7 @@
 			<ingredient name="resourceElectricParts" count="20"/>
 			<ingredient name="switch" count="1"/>
 			<ingredient name="speaker" count="2"/>
-			<ingredient name="glassBusinessSheet" count="10"/>
+			<ingredient name="glassBlockVariantHelper" count="10"/>
 		</recipe>
 		
 		<recipe name="BillboardVideoMP4" count="1" craft_area="workbench" >
@@ -29,7 +29,7 @@
 			<ingredient name="resourceElectricParts" count="20"/>
 			<ingredient name="switch" count="1"/>
 			<ingredient name="speaker" count="2"/>
-			<ingredient name="glassBusinessSheet" count="10"/>
+			<ingredient name="glassBlockVariantHelper" count="10"/>
 		</recipe>
 		
 		<recipe name="Billboard01" count="1" craft_area="workbench" >
