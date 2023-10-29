@@ -546,24 +546,43 @@
 			<property name="Tags" value="entity,male,npc,walker,melee,bandit,DRMid"/> 
 			<property name="Faction" value="bandits"/>
 			<property name="HandItem" value="meleeNPCClubWood"/>
-			<property name="AITask-1" value="BreakBlock"/>
+			<property name="AITask" value="
+				BreakBlock|
+				DestroyArea|
+				Territorial|
+				ApproachDistraction|
+				RunawayWhenHurt runChance=0.5;healthPer=0.5;healthPerMax=0.7|
+				ApproachAndAttackTarget class=EntityAlive,0|
+				ApproachSpot|
+				Look|
+				Wander|
+				"/>
+			<property name="AITarget" value="
+				SetAsTargetIfHurt class=EntityAlive,0,0|
+				BlockingTargetTask|
+				SetNearestCorpseAsTarget flags=edible|
+				SetNearestEntityAsTarget class=EntityAlive,0,0|
+				"/>
+		</entity_class>	
+
+			<!--<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="DestroyArea"/>
 			<property name="AITask-3" value="Territorial"/>
 			<property name="AITask-4" value="ApproachDistraction"/>
 			<property name="AITask-5" value="RunawayWhenHurt" data="runChance=0.3;healthPer=0.3;healthPerMax=0.7"/>
-			<property name="AITask-6" value="ApproachAndAttackTarget" data="class=EntityPlayer,0,EntityZombie,0,EntityEnemyAnimal,0,EntityAnimal,0" />
+			<property name="AITask-6" value="ApproachAndAttackTarget" data="class=EntityAlive,0" />
 			<property name="AITask-7" value="ApproachSpot"/> 
 			<property name="AITask-8" value="Look"/>
 			<property name="AITask-9" value="Wander"/>
 			<property name="AITask-10" value="" />	
-			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityPlayer,EntityZombie,EntityEnemyAnimal"/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityAlive,0,0" /> -->
 			<!-- <property name="AITarget-1" value="SetAsTargetIfHurtSDX, SCore" data="class=EntityAlive"/>	-->	
-			<property name="AITarget-2" value="BlockingTargetTask"	/>
+			<!--<property name="AITarget-2" value="BlockingTargetTask"	/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityAlive,0,0" />			
-			<property name="AITarget-4" value=""/> 
-		</entity_class>		
+			<property name="AITarget-4" value=""/> -->
+			
 		
-		<entity_class name="npcRangedBanditTemplate" extends="npcMeleeBanditTemplate" ignore="AIPackages"> <!-- kinda works  -->
+		<entity_class name="npcRangedBanditTemplate" extends="npcMeleeBanditTemplate" ignore="AIPackages"> <!-- kinda works but not used in this mod -->
 			<property name="UserSpawnType" value="None"/>
 			<property name="Class" value="EntityBandit" />  
 			<property name="Tags" value="entity,male,npc,walker,ranged,bandit,DRMid"/> 
@@ -574,13 +593,13 @@
 			<property name="AITask-3" value="Look"/>
 			<property name="AITask-4" value="ApproachDistraction"/>
 			<property name="AITask-5" value="RangedAttackTarget" data="itemType=1;cooldown=4;duration=6"/>
-			<property name="AITask-6" value="ApproachAndAttackTarget" class="EntityPlayer,0,EntityZombie,0,EntityEnemyAnimal,0" />	
+			<property name="AITask-6" value="ApproachAndAttackTarget" data="class=EntityAlive,0" />
 			<property name="AITask-7" value="Territorial"/>
 			<property name="AITask-8" value="ApproachSpot"/> 
 			<property name="AITask-9" value="Wander"/>
 			<property name="AITask-10" value=""/>
 			
-			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityPlayer,EntityZombie,EntityEnemyAnimal"/>	
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityAlive,0,0" />	
 			<property name="AITarget-2" value="BlockingTargetTask"	/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityAlive,0,0" />			
 			<property name="AITarget-4" value=""/> 
@@ -598,15 +617,15 @@
 			<property name="AITask-4" value="ApproachDistraction"/>
 			<property name="AITask-5" value="RangedAttackTargetSDX, SCore" data="itemType=1;attackPeriod=10"/> 
 			<!-- <property name="AITask-5" value="RangedAttackTarget" data="itemType=1;attackPeriod=10"/> -->
-			<property name="AITask-6" value="ApproachAndAttackTarget" class="EntityPlayer,0,EntityZombie,0,EntityEnemyAnimal,0" />	
+			<property name="AITask-6" value="ApproachAndAttackTarget" data="class=EntityAlive,0" />
 			<property name="AITask-7" value="ApproachSpot"/> 
 			<property name="AITask-8" value="Territorial"/>
 			<property name="AITask-9" value="Wander"/>
 			<property name="AITask-10" value=""/>
 			
-			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityPlayer,EntityZombie,EntityEnemyAnimal"/>	
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityAlive,0,0" />	
 			<property name="AITarget-2" value="BlockingTargetTask"	/>
-			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,0,0,EntityZombie,0,0,EntityEnemyAnimal,0,0,EntityAnimal,0,0" />				
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityAlive,0,0" />				
 			<property name="AITarget-4" value=""/> 
 		</entity_class>	
 
