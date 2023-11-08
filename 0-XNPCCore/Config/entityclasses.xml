@@ -560,7 +560,6 @@
 			<property name="AITarget" value="
 				SetAsTargetIfHurt class=EntityAlive,0,0|
 				BlockingTargetTask|
-				SetNearestCorpseAsTarget flags=edible|
 				SetNearestEntityAsTarget class=EntityAlive,0,0|
 				"/>
 		</entity_class>	
