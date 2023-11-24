@@ -303,28 +303,28 @@
             <duration value="3"/>
             <update_rate value="1"/>
              <effect_group>
-                <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" target="other" cvar="healAbrasionMult" operation="set" value="3"/> 
-                <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" target="other" cvar="medicalRegHealthAmount" operation="add" value="30"/> 
-                <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" target="other" cvar="medRegHealthIncSpeed" operation="set" value="2">
+                <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar"  cvar="healAbrasionMult" operation="set" value="3"/> 
+                <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar"  cvar="medicalRegHealthAmount" operation="add" value="30"/> 
+                <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar"  cvar="medRegHealthIncSpeed" operation="set" value="2">
                     <requirement name="ProgressionLevel" progression_name="perkPhysician" operation="Equals" value="0"/>
 				</triggered_effect>
-                <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" target="other" cvar="medRegHealthIncSpeed" operation="set" value="2.5">
+                <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar"  cvar="medRegHealthIncSpeed" operation="set" value="2.5">
                     <requirement name="ProgressionLevel" progression_name="perkPhysician" operation="Equals" value="1"/>
 				</triggered_effect>
-                <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" target="other" cvar="medRegHealthIncSpeed" operation="set" value="2.8">
+                <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar"  cvar="medRegHealthIncSpeed" operation="set" value="2.8">
                     <requirement name="ProgressionLevel" progression_name="perkPhysician" operation="Equals" value="2"/>
 				</triggered_effect>
-                <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" target="other" cvar="medRegHealthIncSpeed" operation="set" value="3.1">
+                <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar"  cvar="medRegHealthIncSpeed" operation="set" value="3.1">
                     <requirement name="ProgressionLevel" progression_name="perkPhysician" operation="Equals" value="3"/>
 				</triggered_effect>
-                <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" target="other" cvar="medRegHealthIncSpeed" operation="set" value="3.5">
+                <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar"  cvar="medRegHealthIncSpeed" operation="set" value="3.5">
                     <requirement name="ProgressionLevel" progression_name="perkPhysician" operation="Equals" value="4"/>
 				</triggered_effect>
-                <triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="other" buff="buffProcessConsumables"/>
-                <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" target="other" buff="buffInjuryBleeding"/>
+                <triggered_effect trigger="onSelfBuffStart" action="AddBuff"  buff="buffProcessConsumables"/>
+                <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff"  buff="buffInjuryBleeding"/>
 			 </effect_group>	
 			 <effect_group>	
-                <triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="other" buff="buffInjuryAbrasionTreated">
+                <triggered_effect trigger="onSelfBuffStart" action="AddBuff"  buff="buffInjuryAbrasionTreated">
                     <requirement name="HasBuff" buff="buffInjuryAbrasion"/>
                 </triggered_effect>
             </effect_group>
