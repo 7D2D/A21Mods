@@ -124,6 +124,8 @@ itemNPCModHelp,items,Item,,,NPC Action: Help,,,,Action PNJ: Aide,,NPCアクシ�
 itemNPCModStop,items,Item,,,NPC Action: Stop,,,,Action PNJ: Arrêt,,NPCアクション： 停止,,,,,,,
 itemNPCModMode,items,Item,,,NPC Action: Mode,,,,Action PNJ: Mode,,NPCアクション： モード,,,,,,,
 
+spherePickUpNPC,items,Item,,,Placeable NPC,,,,PNJ plaçable,,,,,,,,,,
+
 buffNPCModHaltDisplayName,items,Item,,,Halt,,,,Arrêter,,,,,,,,,
 buffNPCModHaltDisplayDesc,items,Item,,,"While in either Threat or Full Control Mode, your hired NPCs will not engage until you tell them to Resume",,,,"Tant que vos PNJs seront en mode de contrôle complet ou de menaces, ils n'initieront pas le combat tant que vous le leur disiez de Reprendre",,,,,,,,,
 buffNPCModResumeDisplayName,items,Item,,,Resume,,,,Reprendre,,,,,,,,,
@@ -137,6 +139,7 @@ buffNPCModFullControlModeDisplayDesc,items,Item,,,"While in this mode, your hire
 
 GenericNPC_start,Quest,Dialogs,,,"Hello friend, how can I help you?",,,,"Bonjour ami, comment puis-je vous aider?",,こんにちは友達、どのようにあなたを助けることができますか？,,,,,,,
 GenericNPC_Command Menu,Quest,Dialogs,,,Command Menu,,,,Menu de commandes,,コマンドメニュー,,,,,,,
+GenericNPC_Admin Menu,Quest,Dialogs,,,Admin Menu,,,,Menu de administration,,,,,,,,,,
 GenericNPC_Weapon Classes,Quest,Dialogs,,,Weapon Classes,,,,Classes d'armes,,武器クラス,,,,,,,
 GenericNPC_Melee Menu,Quest,Dialogs,,,Melee Weapons,,,,Armes de mêlée,,近接武器,,,,,,,
 GenericNPC_Pistol Menu,Quest,Dialogs,,,Pistols,,,,Pistolets,,ピストル,,,,,,,
