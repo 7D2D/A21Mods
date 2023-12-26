@@ -14,7 +14,7 @@
 	
 		<item name="spherePickUpNPC">
           <property name="HoldType" value="7"/>
-          <property name="Meshfile" value="#@modfolder:Resources/placementfemale.unity3d?placementfemale"/>
+          <property name="Meshfile" value="#@modfolder:Resources/XythNPCs.unity3d?placementfemale"/>
           <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/> 
           <property name="Material" value="Mmetal"/>
           <property name="HoldingItemHidden" value="true"/>
@@ -27,7 +27,25 @@
             <property name="Class" value="DeployNPCSDX, SCore"/>
           </property>
         </item>
-	
+		
+		<item name="bakerPickUpNPC">
+			<property name="Extends" value="spherePickUpNPC" />
+			<!--<property name="EntityClass" value="npcBakerClub" />
+			<property name="AutoHire" value="false" />
+			<property name="EntityName" value="John Wayne" /> -->
+          <property name="Meshfile" value="#@modfolder:Resources/XythNPCs.unity3d?BakerPlacement"/>
+        </item>
+		
+		<item name="nursePickUpNPC">
+			<property name="Extends" value="spherePickUpNPC" />
+          <property name="Meshfile" value="#@modfolder:Resources/XythNPCs.unity3d?NursePlacement"/>
+        </item>
+		
+		<item name="foxPickUpNPC">
+			<property name="Extends" value="spherePickUpNPC" />
+          <property name="Meshfile" value="#@modfolder:Resources/XythNPCs.unity3d?FoxPlacement"/>
+        </item>
+
 		<item name="itemNPCModHelp">
 			<property name="HoldType" value="9"/>
 			<property name="Material" value="Morganic"/>
