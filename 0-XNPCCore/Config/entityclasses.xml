@@ -551,7 +551,7 @@
 				DestroyArea|
 				Territorial|
 				ApproachDistraction|
-				RunawayWhenHurt runChance=0.5;healthPer=0.5;healthPerMax=0.7|
+				RunawayWhenHurt runChance=0.1;healthPer=0.2;healthPerMax=0.5|
 				ApproachAndAttackTarget class=EntityAlive,0|
 				ApproachSpot|
 				Look|
@@ -4078,7 +4078,7 @@
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Bob,Billy,Beau,Ben,Brody,Byron,Brian,Bruce" />				
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Baker_X"/> 
-			<property name="PickUpItem" value="bakerPickUpNPC" />
+			<property name="PickUpItem" value="bakerPickUpNPC" /> 
 		</entity_class>
  		
 		<entity_class name="npcBakerAShotgun" extends="npcAdvancedAShotgunTemplate"> 

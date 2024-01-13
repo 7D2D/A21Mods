@@ -28,9 +28,5 @@
       <window name="windowPathFindingKeypad"/>
     </window_group>
 
-    <window_group name="LockPicking" >
-      <window name="windowLockPicking"/>
-    </window_group>
-
   </append>
 </configs>
