@@ -2,48 +2,28 @@
 
 <!--	<remove xpath="//entitygroup/entity[starts-with(@name, 'animal')] -->
 
-	<append xpath="/entitygroups/entitygroup[@name='EnemyAnimalsBurntForest']">	
-		animalCrow,3
-	</append>
-	<append xpath="/entitygroups/entitygroup[@name='EnemyAnimalsDesert']">	
-		animalCrow,5
-	</append>
-	<append xpath="/entitygroups/entitygroup[@name='EnemyAnimalsSnow']">	
-		animalEagle,5
-		animalPenguin,5
-	</append>	
-	<append xpath="/entitygroups/entitygroup[@name='EnemyAnimalsWasteland']">	
-		animalBat,5
-		animalBats,5
-	</append>
-	<append xpath="/entitygroups/entitygroup[@name='WildGameForest']">		
-		animalRobin,5
-		animalEagle,5
-		animalAlcatraz,5
-	</append>
-
-	<!--
-		Entity groups used by spawners for sleeper volumes.
-		Since these birds are all timid, they have low probabilities of spawning in,
-		relative to animals that can attack others.
-	-->
-	<append xpath="/entitygroups/entitygroup[starts-with(@name,'npcEnemyAnimalsAllGroup')]">
-		animalBat,0.1
-		animalBats,0.1
-		animalCrow,0.1
-	</append>
-	<append xpath="/entitygroups/entitygroup[starts-with(@name,'npcFriendlyAnimalsAllGroup')]">
-		animalAlcatraz,0.1
-		animalEagle,0.1
-		animalPenguin,0.05
-		animalRobin,0.1
-	</append>
-	<append xpath="/entitygroups/entitygroup[starts-with(@name,'npcFlyersAllGroup')]">
-		animalAlcatraz,0.1
-		animalBat,0.1
-		animalBats,0.1
-		animalCrow,0.1
-		animalEagle,0.1
-		animalRobin,0.1
-	</append>
+	<csv xpath="/entitygroups/entitygroup[@name='EnemyAnimalsBurntForest']/text()" delim="\n" op="add" >
+		animalCrow, 3
+	</csv>	
+	<csv xpath="/entitygroups/entitygroup[@name='EnemyAnimalsDesert']/text()" delim="\n" op="add" >
+		animalCrow, 8
+	</csv>
+	<csv xpath="/entitygroups/entitygroup[@name='EnemyAnimalsSnow']/text()" delim="\n" op="add" >
+		animalEagle, 5
+		animalPenguin, 5
+	</csv>	
+	<csv xpath="/entitygroups/entitygroup[@name='EnemyAnimalsWasteland']/text()" delim="\n" op="add" >
+		animalBat, 8
+		animalBats, 8
+	</csv>	
+	<csv xpath="/entitygroups/entitygroup[@name='WildGameForest']/text()" delim="\n" op="add" >
+		animalRobin, 8
+		animalEagle, 8
+		animalAlcatraz, 8
+	</csv>
+	<csv xpath="/entitygroups/entitygroup[@name='WildGameForestNight']/text()" delim="\n" op="add" >
+		animalBat, 8
+		animalBats, 8
+	</csv>
+	
 </configs>
