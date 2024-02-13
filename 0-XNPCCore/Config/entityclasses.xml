@@ -45,13 +45,13 @@
 			Wander|
 		</set>			
 		<set xpath="/entity_classes/entity_class[@name='zombieDemolition']/property[@name='AITask']/@value">
-			BreakBlock|
-			DestroyArea|
-			ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityEnemyAnimal|
-			ApproachSpot|
-			Look|
-			Wander|
-		</set>			
+            BreakBlock|
+            DestroyArea|
+            ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityEnemyAnimal,0,EntityNPC,0|
+            ApproachSpot|
+            Look|
+            Wander|
+        </set>		
 		
 		<set xpath="//entity_class[starts-with(@name, 'animalTemplateTimid')]/property[@value='RunawayFromEntity']/@data">class=EntityPlayer,EntityZombie,EntityEnemyAnimal,EntityNPC</set> 
 		
@@ -4078,7 +4078,7 @@
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Bob,Billy,Beau,Ben,Brody,Byron,Brian,Bruce" />				
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Baker_X"/> 
-			<property name="PickUpItem" value="bakerPickUpNPC" /> 
+			<property name="PickUpItem" value="bakerPickUpNPC" />
 		</entity_class>
  		
 		<entity_class name="npcBakerAShotgun" extends="npcAdvancedAShotgunTemplate"> 
