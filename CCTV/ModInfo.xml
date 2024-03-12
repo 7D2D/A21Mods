@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+    <Name value="CCTV" />
+    <Description value="Adds an 8 camera CCTV system to the game." />
+	<Author value="Xyth" />
+	<DisplayName value="CCTV" />
+    <Version value="21.2.0.0" />
+</xml>
